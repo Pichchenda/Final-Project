@@ -1,0 +1,802 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Cabin', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+img {
+    margin: 0px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.auskids-container {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Auskids Header */
+.auskids-header-container {
+
+}
+
+.auskids-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auskids-header-left {
+    max-width: 30%;
+    margin: 10px; 
+}
+
+.auskids-logo {
+    width:100%;
+    
+}
+
+.auskids-header-middle {
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.auskids-search-bar {
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    font-size: 16px;
+    height: 34px;
+    border: 1px solid rgb(192,192,192)
+    
+}
+
+.search-icon {
+    border-radius: 2px;
+    padding-top: 2px;
+    width: 20%;
+    border: 1px solid rgb(192,192,192)
+}
+
+.search-icon svg{
+    width: 100%;
+}
+
+.auskids-header-right {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.auskids-header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-menu {
+  display: block;
+}
+
+.hamburger-icon {
+    padding-left: 10px;   
+}
+
+.auskids-main-nav {
+    width: 100%;
+}
+
+.auskids-main-nav-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.auskids-list-item {
+    list-style: none;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+
+.auskids-list-item:hover {
+    color: red;
+}
+
+.auskids-list-item a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.side-menu-position {
+    padding-top: 25px;
+    position: fixed;
+    top: 90px;
+    left: 5px;
+    z-index: 2;
+}
+  
+.side-menu-design {
+    background-color: rgb(228, 212, 212);
+    width: 280px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.show-menu {
+  opacity: 1;
+}  
+
+.side-menu-header {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 0px 5px;  
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    left: 250px;
+    top: 110px;
+}
+
+.side-menu-content {
+    color: #333;
+    font-size: 20px;
+    margin: 25px;
+    padding-left: 0;
+}
+  
+.side-menu-content li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.side-menu-content li:hover {
+    color: grey;
+}
+
+
+.dropdown-menu {
+    background-color: rgba(248, 244, 244, 1);
+    box-shadow: 0 0 2rem rgba(0,0,0,.1);
+    display: none;
+    padding: 15px;
+    position: absolute; 
+    top: 170px; 
+    width: 250px;
+    z-index: 10;
+}
+  
+.dropdown-menu#menu-1 {
+    left: 200px;
+    min-width: 300px;
+}
+  
+.dropdown-menu#menu-2 {
+    left: 500px;
+    min-width: 300px;
+}
+  
+.dropdown-menu#menu-3 {
+    left: 770px;
+    min-width: 300px; 
+}
+  
+.dropdown-menu#menu-4 {
+    left: 1000px;
+    min-width: 300px; 
+}
+
+.dropdown-menu#menu-5 {
+    left: 1300px;
+    min-width: 300px; 
+}
+  
+.menu-item-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+  
+.menu-item-list li a,
+.menu-item-list li a:visited,
+.menu-item-list li a:focus {
+    color: #454545;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+  
+.menu-item-list li a:hover {
+    background-color: rgb(242,242,242);
+    color: #1264a3;
+}
+  
+.show {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .auskids-header-left {
+        padding-left: 30px;
+    }
+
+    .auskids-header-middle {
+        display: flex;
+        justify-content: center;
+    }
+    .auskids-header-middle{
+        /* min-width: 350px; */
+
+    }   
+   
+    .hamburger-menu {
+        display: none;
+    }
+    
+    .auskids-list-item {
+        display: block;
+    }
+
+    .icon {
+        padding-right: 20px;
+    }
+}
+
+/* Auskids Mid Year Sales */
+.auskids-mid-year-sales {
+    background-color: rgb(218, 139, 139);
+    height: 300px;
+    
+}
+
+.auskids-mid-year-sales-info {
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+    width: 300px;
+    padding: 20px 30px;
+
+}
+
+.mid-year-sales-tittle {
+    font-size: 28px;
+}
+
+.mid-year-sales-details {
+    line-height: 1;
+    margin: 30px 0px;
+    font-size: 18px;
+}
+
+.btn {
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 150px;
+    margin: o auto;
+    cursor: pointer;
+}
+
+.shop-now {
+   padding: 5px 0;
+   font-size: 16px;
+   font-weight: bold;
+   background-color: red;
+   color: #fff;
+
+}
+
+.shop-now:hover {
+    background-color: rgb(241, 113, 113);
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .auskids-mid-year-sales {
+        background-image: url('./img/Mid\ Year\ Sales.jpeg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+    .auskids-mid-year-sales-info {
+        width: 30%;
+        margin-right: 0;
+    }
+
+    .auskids-mid-year-sales-info {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        align-items: center;
+        background-color: rgb(223, 201, 201);
+        position: absolute;
+        top: 200px;
+        left: 80px;
+        margin: 0 auto;
+        padding: 0px;
+    
+    }
+    
+    .mid-year-sales {
+        padding: 20px;
+    }
+    
+    
+}
+
+@media (min-width: 992px) {
+    .auskids-mid-year-sales {
+        background-image: url('./img/Mid\ Year\ Sales.jpeg');
+        background-repeat: no-repeat;
+        background-size: 65% 100%;
+        background-position: left;
+        height: 400px;
+        
+    }
+
+    .auskids-mid-year-sales-info {
+        width: 35%;
+        margin-right: 0;
+        padding-top: 50px;
+    }
+
+    .mid-year-sales-title {
+        font-size: 34px;
+    }
+    .mid-year-sales-details {
+        line-height: 1.5;
+        margin: 50px 0px;
+    }
+}
+
+
+/* Auskids Sales */
+.auskids-sales {
+    padding: 15px 50px;
+    border: 1px solid red;
+}
+
+.auskids-sales-title {
+    font-size: 24px;
+
+}
+
+.auskids-sales-title:hover {
+    color: gray
+
+}
+
+.auskids-sales-containers {
+
+}
+.auskids-sales-indi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+
+.auskids-sales-indi:hover {
+    transform: scale(1.1);
+}
+
+.sales-image-container {
+    width: 400px;
+    height: 300px;
+} 
+
+.sales-image {
+    width: 100%;
+    height: 100%;
+}
+
+.sales-detail {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dumb-remote {
+    margin-bottom: 20px;
+    display: none;
+    /* justify-content: center;
+    align-items: center;
+    gap: 550px; */
+    border: 1px solid green;
+    position: absolute;
+    top: 130px;
+    
+}
+  
+.dumb-remote button {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border: none;
+    background-color: #444;
+    cursor: pointer; 
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 50%;
+    transition: 300ms ease-in-out;
+}
+  
+.dumb-remote button:hover {
+    background-color: #666;
+}
+  
+.dumb-remote button:active {
+    background-color: #888;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .auskids-sales {
+        width: 1000px;
+        border: 1px solid red;
+        overflow: auto;
+
+    }
+    .auskids-sales-containers {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 2000px;
+        /* arrow use java when press button it shows next pic */
+    }
+
+    .dumb-remote {
+        /* margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 650px; */
+        display: block;
+        border: 1px solid green;
+        position: absolute;
+        top: 130px;
+
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .auskids-sales-title {
+        font-size: 30px;
+    }
+    .auskids-sales-containers {
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    .sales-image-container {
+        width: 300px;
+    }
+
+    .sales-details {
+        font-size: 22px;
+    }
+
+}
+
+/* Auskids New Arrivals */
+
+.auskids-new-arrivals {
+    padding-left: 50px;
+}
+
+.auskids-new-arrivals-title {
+    font-size: 24px;
+}
+
+.auskids-new-arrivals-title:hover {
+    color: grey;
+}
+
+.auskids-new-arrivals-main-container {
+    padding: 15px 50px;
+    display: grid;
+   grid-template-columns: 1fr;
+}
+
+.auskids-new-arrivals-indi-container {
+    text-align: center;
+    position: relative;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.new-arrivals-img-container {
+    
+}
+
+.new-arrivals-image {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+}
+
+.heart-icons {
+    width: 40px;
+    position: absolute;
+    top: 25px;
+    right: 90px;
+}
+
+.item-detail p{
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .auskids-new-arrivals-main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .heart-icons {
+        right: 8px;
+    }
+}
+
+@media (min-width: 992px) {
+    .auskids-new-arrivals-title {
+        font-size: 30px;
+    }
+    .auskids-new-arrivals-main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .heart-icons {
+        top: 20px;
+        right: 55px;
+    }
+    
+    .item-detail {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 60px;
+        font-size: 18px;
+    }
+}
+
+/* Auskids Trending */
+
+.auskids-trending {
+    
+}
+
+.auskids-trending-title {
+    font-size: 24px;
+    padding: 0px 50px;
+    cursor: pointer;
+}
+
+.auskids-trending-title:hover {
+    color: grey;
+}
+.auskids-trending-search-items {
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-item {
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: bold;
+    width: 100px;
+    margin-right: 20px;
+    white-space: nowrap;
+    display: inline;
+}
+
+.auskids-trending-search-items a {
+    text-decoration: none;
+    color: #333;
+    
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .auskids-trending {
+        height: 200px;
+        padding: 10px 20px;
+    }
+    .auskids-trending-title {
+        font-size: 28px;
+    }
+    .auskids-trending-search-items {
+        width: 650px;
+    
+    }
+
+    .search-item {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 992px) {
+    .auskids-trending {
+        height: 200px;
+    }
+    .auskids-trending-title {
+        font-size: 30px;
+    }
+    .auskids-trending-search-items{
+        width: 800px;
+    }
+    .search-item {
+        display: inline;
+        line-height: 2.5;
+        background-color: lightgray;
+        border-radius: 5px;
+        padding:5px;
+        white-space: nowrap;
+        margin-right: 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .search-item:hover {
+        background-color: gray;
+    }
+    .auskids-trending-search-items a:hover{
+        color: white; 
+    }
+}
+
+/* Auskids Footer */
+
+.auskids-footer{
+    background-color: dimgrey;
+    font-size: 14px;
+    color: #fff;  
+    text-align: center;
+}
+
+.auskids-footer-container{
+    
+}
+
+.footer-indi {
+ 
+}
+.list-item {
+    list-style: none;
+    line-height: 2;
+    
+}
+
+.list-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.list-item:hover a {
+    color: #333;
+}
+
+
+.auskids-info {
+ padding-left: 40px;
+}
+
+.follow-us {
+    font-weight: bold;
+}
+
+.fa {
+    padding: 5px;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.copyright {
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .auskids-footer {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .auskids-footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa {
+        padding: 6px;
+        font-size: 25px;
+        width: 36px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+
+    .copyright {
+        font-size: 15px;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .auskids-footer{
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .auskids-footer-container{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 50px 0 20px;
+    }
+
+    .auskids-info {
+        text-align: center; 
+        
+    }
+    
+    .follow-us{
+        text-align: center;
+    }
+
+    .fa {
+        padding: 8px;
+        font-size: 30px;
+        width: 42px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+
+    .copyright{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    
+}
