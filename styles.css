@@ -19,7 +19,7 @@ h2 {
 }
 
 .auskids-container {
-    width: 1400px;
+    /* width: 1400px; */
     max-width: 100%;
     margin: 0 auto;
 }
@@ -36,8 +36,8 @@ h2 {
 }
 
 .auskids-header-left {
-    max-width: 100%;
     margin: 10px; 
+    border: 1px solid red;
 }
 
 .auskids-logo {
