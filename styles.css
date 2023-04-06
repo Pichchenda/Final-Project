@@ -36,7 +36,7 @@ h2 {
 }
 
 .auskids-header-left {
-    max-width: 30%;
+    max-width: 40%;
     margin: 10px; 
 }
 
@@ -48,7 +48,7 @@ h2 {
 .auskids-header-middle {
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+    
 }
 
 .auskids-search-bar {
@@ -75,6 +75,12 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-right: 10px;
+    border: 1px solid blue;
+}
+
+.icon {
+    position: relative;
+    border: 1px solid red;
 }
 
 .auskids-header-bottom {
@@ -223,6 +229,31 @@ h2 {
     display: block;
 }
 
+.right-header-hover {
+    width: 90px;
+    font-size: 16px;
+    position: absolute;
+    top: 70px; 
+    white-space: nowrap;
+}
+
+.right-header-hover#rhh1 {
+    left: 1220px;
+}
+
+.right-header-hover-content {
+    list-style: none;
+    background-color: #c9c6c6;
+    padding: 5px;
+    border-radius: 2px;
+    display: flex;
+}
+
+.right-header-hover-content a{
+    text-decoration: none;
+    color: #333;
+}
+
 @media (min-width: 768px) {
     .auskids-header-left {
         padding-left: 30px;
@@ -246,7 +277,7 @@ h2 {
     }
 
     .icon {
-        padding-right: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -511,26 +542,26 @@ h2 {
 
 .auskids-new-arrivals-indi-container {
     text-align: center;
-    position: relative;
+    
     padding: 20px 0px;
     cursor: pointer;
 }
 
 .new-arrivals-img-container {
-    
+    position: relative;
 }
 
 .new-arrivals-image {
     width: 300px;
     height: 300px;
     object-fit: fill;
+    
 }
 
-.heart-icons {
-    width: 40px;
+.new-arrivals-img-container svg {
     position: absolute;
-    top: 25px;
-    right: 90px;
+    top: 5px;
+    right: 140px;
 }
 
 .item-detail p{
@@ -547,8 +578,8 @@ h2 {
         row-gap: 15px;
     }
 
-    .heart-icons {
-        right: 8px;
+    .new-arrivals-img-container svg {
+        right: 50px;
     }
 }
 
@@ -563,9 +594,9 @@ h2 {
         row-gap: 15px;
     }
 
-    .heart-icons {
-        top: 20px;
-        right: 55px;
+    .new-arrivals-img-container svg {
+        top: 5px;
+        right: 10px;
     }
     
     .item-detail {

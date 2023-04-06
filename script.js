@@ -1,3 +1,4 @@
+
 //Side Men
 function sideMenuAppears (){
   document.getElementById('side-menu').classList.add('show-menu');  
@@ -75,10 +76,9 @@ document.getElementById('menu-5').addEventListener('mouseleave', hideMenu);
 
 // // scroll to left or right//
 
-// const rightBtn = document.querySelector('#channel-up');
-
-// function myFunction(){
-//   const element = document.getElementById('myDIV');
-//   element.scrollRight = 50;
-// }
-// rightBtn.addEventListener('onclick',myFunction);
+const rightBtn = document.getElementById('#channel-up');
+function myFunction(){
+  const element = document.getElementById('accessories');
+  element.scrollIntoView({block:"end"});
+}
+rightBtn.addEventListener('click',myFunction);
