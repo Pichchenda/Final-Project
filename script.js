@@ -76,9 +76,31 @@ document.getElementById('menu-5').addEventListener('mouseleave', hideMenu);
 
 // // scroll to left or right//
 
-const rightBtn = document.getElementById('#channel-up');
-function myFunction(){
-  const element = document.getElementById('accessories');
-  element.scrollIntoView({block:"end"});
+
+
+
+
+// 
+// heartIcons.addEventListener('click',backgroundFill);
+
+const wishList = document.querySelector('#wish-list');
+const heartIcons = document.querySelectorAll('.heart-icon');
+
+for(let i = 0; i < heartIcons.length; i++){
+  const heartIcon = heartIcons[i]; 
+  function backgroundFill (){
+      heartIcon.style.fill = "red";
+    }
+  heartIcon.addEventListener('click', backgroundFill);
+  const heartCount = heartIcon.length;
+  console.log(heartCount);
 }
-rightBtn.addEventListener('click',myFunction);
+
+
+
+// for (let i = 0; i < heartIcons.lenghth; i++) {
+//   const heartIcon = heartIcons[i];
+//   console.log(heartIcon);
+//   // const heartCount = heartIcon.length;
+//   // console.log(heartCount);
+// }
