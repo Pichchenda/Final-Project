@@ -40,8 +40,7 @@ p {
 
 .auskids-header-left {
     margin: 10px; ;
-    /* min-width: 100px; */
-    border: 1px solid red;
+    width: 20%;
 }
 
 .auskids-logo {
@@ -52,19 +51,18 @@ p {
 .auskids-header-middle {
     display: flex;
     justify-content: center;
-    /* min-width: 150px; */
-    border: 1px solid red;
-    
+    min-width:  250px;
+    flex-shrink: 1;
 }
 
 .auskids-search-bar {
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
-    border-radius: 2px;
+    border-radius: 3px;
     font-size: 13px;
     font-style: italic;
     height: 34px;
     border: 1px solid rgb(192,192,192);
-    /* Width: 80%; */
+    Width: 100%;
 }
 
 .search-icon {
@@ -80,12 +78,10 @@ p {
 .auskids-header-right {
     display: flex;
     justify-content: space-between;
-    /* margin: 0 10px; */
-    border: 1px solid red;
+    width: 15%;
 }
 
 .auskids-header-right svg {
-
 }
 
 .auskids-header-bottom {
@@ -260,22 +256,7 @@ p {
 /* } */
 
 @media (min-width: 768px) and (max-width: 992px){
-    /* .auskids-header-left {
-        padding-left: 30px;
-        max-width: 200px;
-    }
-
-    .auskids-header-middle {
-        display: flex;
-        justify-content: center;
-        width: 300px;
-    }
-
-    .auskids-search-bar {
-        height: 38px;
-        width: 240px;
-    } */
-
+    
     .auskids-header-right svg {
         width: 100%;
     }
@@ -290,31 +271,11 @@ p {
         
     }
 
-    /* .icon {
-        margin-right: 20px;
-    } */
+   
 }
 
 @media (min-width: 992px) {
-    /* .auskids-header-left {
-        padding-left: 30px;
-        width: 300px;
-    } */
-
-    /* .auskids-header-middle {
-        display: flex;
-        justify-content: center;
-        width: 500px;
-    } */
-
-    /* .auskids-search-bar {
-        height: 38px;
-        width: 240px;
-    } */
-
-    /* .auskids-header-right svg {
-        width: 100%;
-    } */
+   
    
     .hamburger-menu {
         display: none;
@@ -325,10 +286,6 @@ p {
         display: block;
         
     }
-
-    /* .icon {
-        margin-right: 30px;
-    } */
 
     .dropdown-menu {
         top: 145px;
@@ -733,7 +690,8 @@ p {
     }
 
     .item-detail p{
-        font-size: 19px;
+        font-size: 14px;
+        line-height: 0.6;
     }
 }
 
@@ -808,7 +766,6 @@ p {
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-trending {
         height: 150px;
-        border: 1px solid red;
         margin: 0;
     }
     .auskids-trending-title {
@@ -928,7 +885,7 @@ p {
 
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-footer {
-        font-size: 16px;
+        font-size: 12px;
         text-align: left;
        
     }
@@ -948,10 +905,11 @@ p {
     .auskids-info {
         text-align: center;
     }
+
     .fa {
-        padding: 6px;
-        font-size: 25px;
-        width: 36px;
+        padding: 5px;
+        font-size: 18px;
+        width: 30px;
         text-align: center;
         text-decoration: none;
         margin: 5px 2px;
@@ -959,7 +917,7 @@ p {
     }
 
     .copyright {
-        font-size: 13px;
+        font-size: 11px;
         padding-left: 10px;
     }
 }
