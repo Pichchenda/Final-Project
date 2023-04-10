@@ -40,7 +40,7 @@ p {
 
 .auskids-header-left {
     margin: 10px; ;
-    min-width: 100px;
+    /* min-width: 100px; */
     border: 1px solid red;
 }
 
@@ -52,7 +52,7 @@ p {
 .auskids-header-middle {
     display: flex;
     justify-content: center;
-    min-width: 150px;
+    /* min-width: 150px; */
     border: 1px solid red;
     
 }
@@ -64,7 +64,7 @@ p {
     font-style: italic;
     height: 34px;
     border: 1px solid rgb(192,192,192);
-    Width: 80%;
+    /* Width: 80%; */
 }
 
 .search-icon {
@@ -262,7 +262,7 @@ p {
 @media (min-width: 768px) and (max-width: 992px){
     .auskids-header-left {
         padding-left: 30px;
-        width: 200px;
+        max-width: 200px;
     }
 
     .auskids-header-middle {
@@ -488,14 +488,13 @@ p {
     } 
 
     .auskids-mid-year-sales-info {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 300px;
         width: 85%;
-        align-items: center;
         background-color: rgb(223, 201, 201);
         position: absolute;
         top: 200px;
-        left: 80px;
+        left: 60px;
         margin: 0 auto;
         padding: 5px;
     
@@ -598,6 +597,8 @@ p {
 
     .auskids-sales-title {
         font-size: 26px;
+        text-align: left;
+        padding-left: 50px;
     }
     
     .auskids-sales-containers {
@@ -621,7 +622,7 @@ p {
     
 
     .auskids-sales-indi {
-        margin: 30px;
+        margin: 10px;
     }
 
     .sales-image-container {
@@ -723,7 +724,7 @@ p {
     }
 
     .new-arrivals-img-container svg {
-        right: 60px;
+        right: 70px;
 
     }
 
