@@ -52,7 +52,6 @@ p {
     display: flex;
     justify-content: center;
     min-width:  250px;
-    flex-shrink: 0;
 }
 
 .auskids-search-bar {
