@@ -38,6 +38,7 @@ h2 {
 .auskids-header-left {
     margin: 10px; ;
     min-width: 100px;
+    border: 1px solid red;
 }
 
 .auskids-logo {
@@ -49,6 +50,7 @@ h2 {
     display: flex;
     justify-content: center;
     min-width: 150px;
+    border: 1px solid red;
     
 }
 
@@ -59,7 +61,7 @@ h2 {
     font-style: italic;
     height: 34px;
     border: 1px solid rgb(192,192,192);
-    Width: 100%;
+    Width: 80%;
 }
 
 .search-icon {
@@ -69,17 +71,18 @@ h2 {
 }
 
 .search-icon svg{
-    width: 95%;
+    width: 100%;
 }
 
 .auskids-header-right {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
+    /* margin: 0 10px; */
+    border: 1px solid red;
 }
 
 .auskids-header-right svg {
-    width: 85%;
+
 }
 
 .auskids-header-bottom {
