@@ -405,6 +405,81 @@ h2 {
     display: none;
 }
 
+.auskids-mid-year-sales-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 50px auto 28px;
+
+}
+
+.mid-year-sales {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.mid-year-sales img {
+    width: 100%;
+    height: 500px;
+
+    
+}
+
+.dumb-remote {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+  
+.dumb-remote button {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border: none;
+    background-color: #444;
+    cursor: pointer; 
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 50%;
+    transition: 300ms ease-in-out;
+}
+  
+.dumb-remote button:hover {
+    background-color: #666;
+}
+  
+.dumb-remote button:active {
+    background-color: #888;
+}  
+
+.smart-remote {
+    width: 1000px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid green;
+}
+  
+.slide-show {
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+}
+  
+
+
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-mid-year-sales {
         background-image: url('./img/Mid\ Year\ Sales.jpeg');
@@ -435,9 +510,6 @@ h2 {
     
     }
     
-    .auskids-slideshow {
-        display: none;
-    }
     .mid-year-sales {
         padding: 20px;
 
@@ -454,10 +526,6 @@ h2 {
 
 @media (min-width: 992px) {
     .auskids-mid-year-sales {
-        /* background-image: url('./img/Mid\ Year\ Sales.jpeg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center; */
         height: 800px;
     }
 
@@ -465,116 +533,10 @@ h2 {
         display: none;
     }
 
-    
-
-    .auskids-mid-year-sales-container {
-        width: 100%;
-        height: 500px;
-        position: relative;
-        margin: 50px auto 28px;
-
+    .auskids-slideshow{
+        display: block;
     }
-
-    .mid-year-sales {
-        background-color: black;
-        position: absolute;
-        top: 0;
-        bottom:0;
-        right: 0;
-        left: 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    .mid-year-sales img {
-        width: 100%;
-        height: 500px;
-
-        
-    }
-
-    .dumb-remote {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-    }
-      
-    .dumb-remote button {
-        width: 54px;
-        height: 54px;
-        padding: 0;
-        border: none;
-        background-color: #444;
-        cursor: pointer; 
-        color: #fff;
-        font-size: 2em;
-        text-align: center;
-        border-radius: 50%;
-        transition: 300ms ease-in-out;
-    }
-      
-    .dumb-remote button:hover {
-        background-color: #666;
-    }
-      
-    .dumb-remote button:active {
-        background-color: #888;
-    }      
-    .smart-remote {
-        width: 1000px;
-        height: 150px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-        border: 1px solid green;
-    }
-      
-      .slide-show {
-        width: 25%;
-        height: 100%;
-        cursor: pointer;
-      }
-      
-
-   /* .text{
-        text-align: center;
-        background-color: #f2f2f2;
-        padding: 8px 12px;
-        color:  #222;
-        font-size: 15px;
-        position: absolute;
-        bottom: 80px;
-        height: 50px;
-        width: 100%;
-    }  */
-
-
-
-    /* .auskids-mid-year-sales-info {
-        width: 40%;
-        margin-right: 0;
-        padding-top: 100px;
-        height: 100%;
-    }
-
-    .mid-year-sales-title {
-        font-size: 50px;
-
-    }
-    .mid-year-sales-details {
-        line-height: 1.5;
-        margin: 50px 0px;
-        font-size: 24px;
-    }
-
-    .shop-now {
-        font-size: 19px;
-    }
-} */
+} 
 
 
 /* Auskids Sales */
