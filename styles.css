@@ -370,9 +370,7 @@ h2 {
     font-size: 26px;
 }
 
-.auskids-slideshow {
-    display: none;
-}
+
 
 .mid-year-sales-details {
     line-height: 1;
@@ -401,6 +399,11 @@ h2 {
     background-color: rgb(241, 113, 113);
 }
 
+.auskids-slideshow {
+    width: 100%;
+    height: 800px;
+    display: none;
+}
 
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-mid-year-sales {
@@ -432,7 +435,7 @@ h2 {
     
     }
     
-    .mid-year-sales-container {
+    .auskids-slideshow {
         display: none;
     }
     .mid-year-sales {
@@ -462,10 +465,8 @@ h2 {
         display: none;
     }
 
-    .auskids-slideshow {
-        width: 100%;
-        height: 800px;
-    }
+    
+
     .auskids-mid-year-sales-container {
         width: 100%;
         height: 500px;
