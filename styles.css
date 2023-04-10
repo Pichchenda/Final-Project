@@ -461,22 +461,7 @@ h2 {
     background-color: #888;
 }  
 
-.smart-remote {
-    width: 1000px;
-    height: 150px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    border: 1px solid green;
-}
-  
-.slide-show {
-    width: 25%;
-    height: 100%;
-    cursor: pointer;
-}
+
   
 
 
@@ -535,6 +520,23 @@ h2 {
 
     .auskids-slideshow{
         display: block;
+    }
+
+    .smart-remote {
+        width: 1000px;
+        height: 150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        border: 1px solid green;
+    }
+      
+    .slide-show {
+        width: 25%;
+        height: 100%;
+        cursor: pointer;
     }
 } 
 
