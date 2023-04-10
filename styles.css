@@ -51,7 +51,7 @@ p {
 .auskids-header-middle {
     display: flex;
     justify-content: center;
-    min-width:  250px;
+    width: 27%;
 }
 
 .auskids-search-bar {
@@ -59,6 +59,7 @@ p {
     border-radius: 3px;
     font-size: 13px;
     font-style: italic;
+    padding-left: 7px;
     height: 34px;
     border: 1px solid rgb(192,192,192);
     Width: 100%;
@@ -623,7 +624,7 @@ p {
         cursor: pointer;
         transition: transform 0.2s ease-out;
     }
-    
+
     .auskids-sales-indi:hover {
         transform: scale(1.2);
     } 
