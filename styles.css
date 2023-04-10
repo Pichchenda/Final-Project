@@ -808,10 +808,12 @@ p {
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-trending {
         height: 150px;
+        border: 1px solid red;
+        margin: 0;
     }
     .auskids-trending-title {
         font-size: 26px;
-        margin: 20px 0;
+        margin: 10px 0;
     }
     .auskids-trending-search-items {
         width: 750px;
@@ -939,6 +941,13 @@ p {
         padding: 10px 20px;
     }
 
+    .list-item {
+        line-height: 1.3;
+    }
+
+    .auskids-info {
+        text-align: center;
+    }
     .fa {
         padding: 6px;
         font-size: 25px;
