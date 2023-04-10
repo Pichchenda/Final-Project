@@ -260,7 +260,7 @@ p {
 /* } */
 
 @media (min-width: 768px) and (max-width: 992px){
-    .auskids-header-left {
+    /* .auskids-header-left {
         padding-left: 30px;
         max-width: 200px;
     }
@@ -274,7 +274,7 @@ p {
     .auskids-search-bar {
         height: 38px;
         width: 240px;
-    }
+    } */
 
     .auskids-header-right svg {
         width: 100%;
@@ -282,6 +282,7 @@ p {
    
     .hamburger-menu {
         display: none;
+        visibility: hidden;
     }
     
     .auskids-list-item {
@@ -289,9 +290,9 @@ p {
         
     }
 
-    .icon {
+    /* .icon {
         margin-right: 20px;
-    }
+    } */
 }
 
 @media (min-width: 992px) {
