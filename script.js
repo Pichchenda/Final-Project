@@ -76,8 +76,8 @@ document.getElementById('menu-5').addEventListener('mouseleave', hideMenu);
 
 // Mid Year Sales - Slide Show
 
-const prev =  document.querySelector('#prev');
-const next = document.querySelector('#next');
+const prevBtn =  document.querySelector('#prev');
+const nextBtn = document.querySelector('#next');
 const tvScreen = document.querySelector('#tv-screen');
 const slideShows = document.querySelectorAll('.slide-show');
 
@@ -91,7 +91,7 @@ function nextSlide() {
     tvScreen.src === 'img/mid-year-sales 4.jpg'
   }
 }
-next.addEventListener('click', nextSlide);
+nextBtn.addEventListener('click', nextSlide);
 
 function prevSlide (){
   const currentSrc = tvScreen.getAttribute('src');
@@ -104,7 +104,7 @@ function prevSlide (){
   }
 }
 
-prev.addEventListener('click', prevSlide );
+prevBtn.addEventListener('click', prevSlide );
 
 for (let i = 0; i < slideShows.length; i++) {
   const slideShow = slideShows[i];
