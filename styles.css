@@ -293,27 +293,27 @@ p {
     }
 
     .dropdown-menu#menu-1 {
-        left: 130px;
+        left: 100px;
         min-width: 300px;
     }
       
     .dropdown-menu#menu-2 {
-        left: 430px;
+        left: 400px;
         min-width: 300px;
     }
       
     .dropdown-menu#menu-3 {
-        left: 720px;
+        left: 690px;
         min-width: 300px; 
     }
       
     .dropdown-menu#menu-4 {
-        left: 980px;
+        left: 920px;
         min-width: 300px; 
     }
     
     .dropdown-menu#menu-5 {
-        left: 1280px;
+        left: 1200px;
         min-width: 300px; 
     }
 }
