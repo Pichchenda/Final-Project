@@ -551,8 +551,7 @@ h2 {
 
 .auskids-sales-title {
     font-size: 20px;
-    padding-left: 50px;
-
+    text-align: center;
 }
 
 .auskids-sales-title:hover {
@@ -568,16 +567,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease-out;
-    border: 1px solid red;
+    margin-bottom: 20px;
 
 }
 
-.auskids-sales-indi:hover {
-    transform: scale(1.2);
-}
 
 .sales-image-container {
     width: 250px;
@@ -591,8 +584,8 @@ h2 {
 
 .sales-detail {
     font-size: 14px;
-
-    margin: 0;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -615,6 +608,15 @@ h2 {
         overflow-y: hidden;
     }
 
+    .auskids-sales-indi{
+        cursor: pointer;
+        transition: transform 0.2s ease-out;
+    }
+    .auskids-sales-indi:hover {
+        transform: scale(1.2);
+    }
+    
+
     .auskids-sales-indi {
         margin: 30px;
     }
@@ -628,18 +630,6 @@ h2 {
         font-size: 20px;
     }
 
-    .dumb-remote {
-        /* margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 650px; */
-        display: block;
-        border: 1px solid green;
-        position: absolute;
-        top: 130px;
-
-    }
     
 }
 
