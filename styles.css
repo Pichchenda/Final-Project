@@ -78,6 +78,7 @@ p {
     display: flex;
     justify-content: space-between;
     width: 15%;
+    margin: 0 20px;
 }
 
 .auskids-header-right svg {
@@ -484,6 +485,14 @@ p {
         display: none;
     }
 
+    .btn {
+        width: 200px;
+    }
+
+    .shop-now{
+        font-size: 16px;
+    }
+
     .auskids-slideshow{
         display: block;
     }
@@ -601,12 +610,23 @@ p {
 @media (min-width: 992px) {
     .auskids-sales-title {
         font-size: 30px;
+        text-align: left;
+        padding-left: 50px;
     }
     .auskids-sales-containers {
         display: flex;
         justify-content: space-between; 
         padding: 20px;
     }
+
+    .auskids-sales-indi{
+        cursor: pointer;
+        transition: transform 0.2s ease-out;
+    }
+    
+    .auskids-sales-indi:hover {
+        transform: scale(1.2);
+    } 
 
     .sales-image-container {
         width: 400px;
@@ -700,6 +720,8 @@ p {
 @media (min-width: 992px) {
     .auskids-new-arrivals-title {
         font-size: 28px;
+        text-align: left;
+        padding-left: 50px;
     }
     .auskids-new-arrivals-main-container {
         display: grid;
