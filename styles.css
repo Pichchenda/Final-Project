@@ -18,6 +18,9 @@ h2 {
     font-size: 30px;
 }
 
+p {
+    margin: 0;
+}
 .auskids-container {
     /* width: 1400px; */
     max-width: 100%;
@@ -357,7 +360,7 @@ h2 {
 
 /* Auskids Mid Year Sales */
 .auskids-mid-year-sales { 
-    height: 300px;
+    height: 250px;
     background-color: rgb(218, 139, 139);
     display: flex; 
     align-items: center;
@@ -661,7 +664,7 @@ h2 {
 
 .auskids-new-arrivals-title {
     font-size: 20px;
-    padding-left: 50px;
+    text-align: center;
 }
 
 .auskids-new-arrivals-title:hover {
@@ -672,7 +675,7 @@ h2 {
     padding: 15px 50px;
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 10px;
+    row-gap: 20px;
 }
 
 .auskids-new-arrivals-indi-container {
@@ -682,23 +685,20 @@ h2 {
 
 .new-arrivals-img-container {
     position: relative;
-    border: 1px solid red;
 }
 
 .new-arrivals-img-container svg {
     position: absolute;
     top: 5px;
-    right: 145px;
+    right: 50px;
 }
 
 .new-arrivals-image {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     object-fit: fill;
     
 }
-
-
 
 .item-detail p{
     margin: 0;
