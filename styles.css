@@ -710,6 +710,8 @@ p {
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-new-arrivals-title {
         font-size: 26px;
+        text-align: left;
+        padding-left: 50px;
     }
 
     .auskids-new-arrivals-main-container {
@@ -806,7 +808,7 @@ p {
         height: 150px;
     }
     .auskids-trending-title {
-        font-size: 28px;
+        font-size: 26px;
         margin: 20px 0;
     }
     .auskids-trending-search-items {
@@ -814,7 +816,7 @@ p {
     }
 
     .search-item {
-        font-size: 19px;
+        font-size: 16px;
     }
 }
 
@@ -922,7 +924,7 @@ p {
 
 @media (min-width: 768px) and (max-width: 992px) {
     .auskids-footer {
-        font-size: 19px;
+        font-size: 16px;
         text-align: left;
        
     }
@@ -946,7 +948,7 @@ p {
     }
 
     .copyright {
-        font-size: 16px;
+        font-size: 13px;
         padding-left: 10px;
     }
 }
