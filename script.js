@@ -1,17 +1,28 @@
+//Modal Close
+// document.body.addEventListener('click', (event) => {
+//   if (!event.target.closest('.modal') || event.target.closest('.modal-content')) {
+//     return
+//   }
+//   modal.classList.remove('show');
+// })
+
 
 //Side Menu
+const sideMenu = document.getElementById('side-menu');
+const menuTrigger = document.getElementById('menu-trigger');
+const menuClose = document.getElementById('menu-close');
+
 function sideMenuAppears (){
-  document.getElementById('side-menu').classList.add('show-menu');  
+  sideMenu.classList.add('show-menu');  
 }
 
-document.getElementById('menu-trigger').addEventListener('click',sideMenuAppears);
-
+menuTrigger.addEventListener('click',sideMenuAppears);
 
 function sideMenuDisappears (){
-   document.getElementById('side-menu').classList.remove('show-menu');
+  sideMenu.classList.remove('show-menu');
 }
 
-document.getElementById('menu-close').addEventListener('click', sideMenuDisappears);
+menuClose.addEventListener('click', sideMenuDisappears);
 
 //Dropdown Menu
 function showMenu1() {
@@ -83,24 +94,25 @@ const slideShows = document.querySelectorAll('.slide-show');
 
 function nextSlide() {
   const currentSrc = tvScreen.getAttribute('src');
-  if(currentSrc === 'img/Mid\ Year\ Sales.jpeg'){
-    tvScreen.src === 'img/mid-year-sales 2.jpg'
-  } else if (currentSrc === 'img/mid-year-sales 2.jpg'){
-    tvScreen.src === 'img/mid-year-sales 3.jpg'
+  if(currentSrc === './img/Mid Year Sales.jpeg'){
+    tvScreen.src = './img/mid-year-sales 2.jpg';
+  } else if (currentSrc === './img/mid-year-sales 2.jpg'){
+    tvScreen.src = './img/mid-year-sales 3.jpg';
   } else {
-    tvScreen.src === 'img/mid-year-sales 4.jpg'
-  }
+    tvScreen.src = 'img/mid-year-sales 4.jpg';
+  } 
+  
 }
 nextBtn.addEventListener('click', nextSlide);
 
 function prevSlide (){
   const currentSrc = tvScreen.getAttribute('src');
-  if(currentSrc === 'img/mid-year-sales 4.jpg'){
-   tvScreen.src === 'img/mid-year-sales 3.jpg'
-  } else if(currentSrc === './img/mid-year-sales 3.jpg'){
-    tvScreen.src === 'img/mid-year-sales 2.jpg'
+  if(currentSrc === "img/mid-year-sales 4.jpg"){
+   tvScreen.src = "./img/mid-year-sales 3.jpg";
+  } else if(currentSrc === "./img/mid-year-sales 3.jpg"){
+    tvScreen.src = "img/mid-year-sales 2.jpg";
   } else {
-    tvScreen === 'img/Mid\ Year\ Sales.jpeg'
+    tvScreen = "./img/Mid Year Sales.jpeg";
   }
 }
 
@@ -116,28 +128,42 @@ for (let i = 0; i < slideShows.length; i++) {
   
   slideShow.addEventListener('click', changeSlide);
 }
+// Wishlist 
+
+const wishListCount = document.querySelector('#wish-list-count');
+const heartIcons = document.querySelectorAll('.heart-icon');
+
+for(let i = 0; i < heartIcons.length; i++){
+  const heartIcon = heartIcons[i]; 
+  function backgroundFill (){
+    heartIcon.style.fill = "red";
+  }
+  heartIcon.addEventListener('click', backgroundFill);
+
+  
+}
+
+  
+  // wishListCount.textContent = heartIcons.length;
 
 
 
+// wishListCount.addEventListener('event', addToWishlist);
 
+console.log(sales);
+const saleIndi = document.querySelector('#sales-indi');
+for(let i = 0; i < sales.length; i++){
+  const sale = sales[i];
+  const div = document.createElement('div');
+  div.classList.add('sales-image-container');
 
+  // const img = document.createElement('img')
+  // img.src = `${sales.source}`;
+  // img.classList.add('sales-image');
+  // div.append(img);
 
+  const detail1 = document.createElement('p');
+  detail1.textContent =`${sales.detail1}`;
+  console.log(detail1);
 
-
-// Wishlist
-
-// const wishList = document.querySelector('#wish-list');
-// const heartIcons = document.querySelectorAll('.heart-icon');
-
-// for(let i = 0; i < heartIcons.length; i++){
-//   const heartIcon = heartIcons[i]; 
-//   function backgroundFill (){
-//       heartIcon.style.fill = "red";
-//     }
-//   heartIcon.addEventListener('click', backgroundFill);
-//   wishList.textContent = heartIcon.length;
-//   console.log(wishList);
-
-// }
-
-
+}
