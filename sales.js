@@ -11,7 +11,7 @@ const sales = [
     },
     {
         "source":"./img/Sales Accessories.jpeg"
-        ,"dtail1":"Accessories",
+        ,"detail1":"Accessories",
         "detail2":"Shop Now"
     }
 ];

@@ -192,15 +192,22 @@ const wishListCount = document.querySelector('#wish-list-count');
 const heartIcons = document.querySelectorAll('.heart-icon');
 
 for(let i = 0; i < heartIcons.length; i++){
-  const heartIcon = heartIcons[i]; 
-  function backgroundFill (){
-    heartIcon.style.fill = "red";
-    increment();
-  }
-  heartIcon.addEventListener('click', backgroundFill);
-
-  
+  let heartIcon = heartIcons[i]; 
+  function backgroundFill (color){
+  heartIcon = heartIcon.style.fill = color;
+  increment();
 }
+  // heartIcon.addEventListener('click', backgroundFill("red"));
+  heartIcon.addEventListener('click', function checkStyleIcon(e) {
+    // let getSvg = document.getElementsByClassName('.heart-icon')[i].style.fill;
+    // console.log("fdshjfkdshfkdslhf" + heartIcons[i].getAttribute('fill'))
+    if (heartIcons[i].getAttribute('fill') === "none") {
+      backgroundFill("red");
+      console.log(e)
+    }
+})
+}
+
 var globalCounter = 0;
 function increment(){
   globalCounter += 1;
@@ -218,17 +225,21 @@ function increment(){
 console.log(sales);
 const saleIndi = document.querySelector('#sales-indi');
 for(let i = 0; i < sales.length; i++){
-  const sale = sales[i];
+  // const sale = sales[i];
   const div = document.createElement('div');
   div.classList.add('sales-image-container');
 
-  // const img = document.createElement('img')
-  // img.src = `${sales.source}`;
-  // img.classList.add('sales-image');
-  // div.append(img);
+  const img = document.createElement('img')
+  img.src = `${sales[i].source}`;
+  img.classList.add('sales-image');
+  div.append(img);
 
   const detail1 = document.createElement('p');
-  detail1.textContent =`${sales.detail1}`;
-  console.log(detail1);
+  detail1.textContent =`${sales[i].detail1}`;
+  // console.log(detail1);
+
+  const testEl = document.getElementById("test1");
+  testEl.appendChild(div);
+  // console.log(testEl)
 
 }
