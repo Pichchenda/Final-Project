@@ -222,24 +222,35 @@ function increment(){
 
 // wishListCount.addEventListener('event', addToWishlist);
 
-console.log(sales);
-const saleIndi = document.querySelector('#sales-indi');
+
+// JS Dom - Sales
+
+const salesContainer= document.querySelector('#sales-container');
+
+
 for(let i = 0; i < sales.length; i++){
-  // const sale = sales[i];
+  const sale = sales[i];
   const div = document.createElement('div');
-  div.classList.add('sales-image-container');
+  div.classList.add('auskids-sales-indi');
+  console.log(div);
+  
 
   const img = document.createElement('img')
-  img.src = `${sales[i].source}`;
+  img.src = sale.source;
   img.classList.add('sales-image');
   div.append(img);
 
   const detail1 = document.createElement('p');
-  detail1.textContent =`${sales[i].detail1}`;
-  // console.log(detail1);
+  detail1.textContent = sale.detail1;
+  detail1.classList.add('sales-detail')
+  div.append(detail1);
 
-  const testEl = document.getElementById("test1");
-  testEl.appendChild(div);
-  // console.log(testEl)
+  
+  const detail2 = document.createElement('button');
+  detail2.classList.add('shop-now-btn');
+  detail2.textContent = sale.detail2;
+  div.append(detail2);
+
+  salesContainer.append(div);
 
 }
