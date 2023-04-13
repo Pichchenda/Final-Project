@@ -195,10 +195,17 @@ for(let i = 0; i < heartIcons.length; i++){
   const heartIcon = heartIcons[i]; 
   function backgroundFill (){
     heartIcon.style.fill = "red";
+    increment();
   }
   heartIcon.addEventListener('click', backgroundFill);
 
   
+}
+var globalCounter = 0;
+function increment(){
+  globalCounter += 1;
+  let counter = wishListCount;
+  counter.textContent = globalCounter;
 }
 
   

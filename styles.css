@@ -414,6 +414,9 @@ p {
         display: none; 
         visibility: hidden; 
     }
+    .side-menu-content {
+        display: none;
+    }
     
     .auskids-list-item {
         display: block;
@@ -421,7 +424,7 @@ p {
     }
 
     .dropdown-menu {
-        top: 150px;
+        top: 160px;
     }
 
     .dropdown-menu#menu-1 {
@@ -556,7 +559,7 @@ p {
     font-size: 40px;
 }
 
-.dumb-remote {
+.remote {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
