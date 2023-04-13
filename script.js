@@ -25,65 +25,123 @@ function sideMenuDisappears (){
 menuClose.addEventListener('click', sideMenuDisappears);
 
 //Dropdown Menu
+const menu1 = document.getElementById('menu-1');
+const menu2 = document.getElementById('menu-2');
+const menu3 = document.getElementById('menu-3');
+const menu4 = document.getElementById('menu-4');
+const menu5 = document.getElementById('menu-5');
+const menu1Btn = document.getElementById('menu-1-button');
+const menu2Btn = document.getElementById('menu-2-button');
+const menu3Btn = document.getElementById('menu-3-button');
+const menu4Btn = document.getElementById('menu-4-button');
+const menu5Btn = document.getElementById('menu-5-button');
+
+
 function showMenu1() {
-  document.getElementById('menu-1').classList.add('show');
-  document.getElementById('menu-2').classList.remove('show');
-  document.getElementById('menu-3').classList.remove('show');
-  document.getElementById('menu-4').classList.remove('show');
-  document.getElementById('menu-5').classList.remove('show');
+  menu1.classList.add('show');
+  menu2.classList.remove('show');
+  menu3.classList.remove('show');
+  menu4.classList.remove('show');
+  menu5.classList.remove('show');
 }
 
 function showMenu2() {
-  document.getElementById('menu-1').classList.remove('show');
-  document.getElementById('menu-2').classList.add('show');
-  document.getElementById('menu-3').classList.remove('show');
-  document.getElementById('menu-4').classList.remove('show');
-  document.getElementById('menu-5').classList.remove('show');
+  menu1.classList.remove('show');
+  menu2.classList.add('show');
+  menu3.classList.remove('show');
+  menu4.classList.remove('show');
+  menu5.classList.remove('show');
 }
 
 function showMenu3() {
-  document.getElementById('menu-1').classList.remove('show');
-  document.getElementById('menu-2').classList.remove('show');
-  document.getElementById('menu-3').classList.add('show');
-  document.getElementById('menu-4').classList.remove('show');
-  document.getElementById('menu-5').classList.remove('show');
+  menu1.classList.remove('show');
+  menu2.classList.remove('show');
+  menu3.classList.add('show');
+  menu4.classList.remove('show');
+  menu5.classList.remove('show');
 }
 
 function showMenu4() {
-  document.getElementById('menu-1').classList.remove('show');
-  document.getElementById('menu-2').classList.remove('show');
-  document.getElementById('menu-3').classList.remove('show');
-  document.getElementById('menu-4').classList.add('show');
-  document.getElementById('menu-5').classList.remove('show');
+  menu1.classList.remove('show');
+  menu2.classList.remove('show');
+  menu3.classList.remove('show');
+  menu4.classList.add('show');
+  menu5.classList.remove('show');
 }
 
 function showMenu5() {
-  document.getElementById('menu-1').classList.remove('show');
-  document.getElementById('menu-2').classList.remove('show');
-  document.getElementById('menu-3').classList.remove('show');
-  document.getElementById('menu-4').classList.remove('show');
-  document.getElementById('menu-5').classList.add('show');
+  menu1.classList.remove('show');
+  menu2.classList.remove('show');
+  menu3.classList.remove('show');
+  menu4.classList.remove('show');
+  menu5.classList.add('show');
 }
 
 function hideMenu() {
-  document.getElementById('menu-1').classList.remove('show'); 
-  document.getElementById('menu-2').classList.remove('show'); 
-  document.getElementById('menu-3').classList.remove('show');
-  document.getElementById('menu-4').classList.remove('show');
-  document.getElementById('menu-5').classList.remove('show');
+  menu1.classList.remove('show'); 
+  menu2.classList.remove('show'); 
+  menu3.classList.remove('show');
+  menu4.classList.remove('show');
+  menu5.classList.remove('show');
 }
 
-document.getElementById('menu-1-button').addEventListener('mouseover', showMenu1);
-document.getElementById('menu-2-button').addEventListener('mouseover', showMenu2);
-document.getElementById('menu-3-button').addEventListener('mouseover',showMenu3);
-document.getElementById('menu-4-button').addEventListener('mouseover',showMenu4);
-document.getElementById('menu-5-button').addEventListener('mouseover',showMenu5);
+menu1Btn.addEventListener('mouseover', showMenu1);
+menu2Btn.addEventListener('mouseover', showMenu2);
+menu3Btn.addEventListener('mouseover',showMenu3);
+menu4Btn.addEventListener('mouseover',showMenu4);
+menu5Btn.addEventListener('mouseover',showMenu5);
 
-document.getElementById('menu-1').addEventListener('mouseleave', hideMenu);
-document.getElementById('menu-2').addEventListener('mouseleave', hideMenu);
-document.getElementById('menu-3').addEventListener('mouseleave', hideMenu);
-document.getElementById('menu-4').addEventListener('mouseleave', hideMenu);
-document.getElementById('menu-5').addEventListener('mouseleave', hideMenu);
+menu1.addEventListener('mouseleave', hideMenu);
+menu2.addEventListener('mouseleave', hideMenu);
+menu3.addEventListener('mouseleave', hideMenu);
+menu4.addEventListener('mouseleave', hideMenu);
+menu5.addEventListener('mouseleave', hideMenu);
+
+
+
+
+//Right Header Hover
+const rhh1 = document.getElementById('rhh1');
+const rhh2 = document.getElementById('rhh2');
+const rhh3 = document.getElementById('rhh3');
+const icon1 = document.getElementById('icon-1');
+const icon2 = document.getElementById('icon-2');
+const icon3 = document.getElementById('icon-3');
+
+function displayText1() {
+  rhh1.classList.add('display');
+  rhh2.classList.remove('display');
+  rhh3.classList.remove('display');
+}
+
+function displayText2() {
+  rhh1.classList.remove('display');
+  rhh2.classList.add('display');
+  rhh3.classList.remove('display');
+}
+
+function displayText3() {
+  rhh1.classList.remove('display');
+  rhh2.classList.remove('display');
+  rhh3.classList.add('display');
+}
+
+
+function hideText() {
+  rhh1.classList.remove('display'); 
+  rhh2.classList.remove('display'); 
+  rhh3.classList.remove('display');
+
+}
+
+icon1.addEventListener('mouseover', displayText1);
+icon2.addEventListener('mouseover', displayText2);
+icon3.addEventListener('mouseover', displayText3);
+
+
+rhh1.addEventListener('mouseleave', hideText);
+rhh2.addEventListener('mouseleave', hideText);
+rhh3.addEventListener('mouseleave', hideText);
 
 // Mid Year Sales - Slide Show
 
