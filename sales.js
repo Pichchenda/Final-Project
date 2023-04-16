@@ -1,6 +1,6 @@
 const sales = [
     {
-        "source" : "./img/New Arrivals 1.jpeg", 
+        "source" : "./img/Sales Clothing.jpeg", 
         "detail1": "Clothes",
         "detail2": "Shop Now"
     },

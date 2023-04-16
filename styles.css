@@ -58,7 +58,7 @@ p {
     justify-content: center;
 }
 
-.modal {
+/* .modal {
     width: 100vw;
     height: 100vh;
     padding: 1em;
@@ -115,8 +115,35 @@ p {
   
 .modal-close:hover svg {
     fill: #d62828;
-}
+} */
   
+
+.auskids-search-bar {
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px 10px;
+    height: 34px;
+    border: 1px solid rgb(192,192,192);
+    Width: 100%;
+}
+
+.auskids-search-bar:focus {
+    outline: none;
+
+}
+
+.search-icon {
+    border-radius: 2px;
+    padding-top: 2px;
+    border: 1px solid rgb(192,192,192);
+    cursor: pointer;
+}
+
+.search-icon svg{
+    width: 100%;
+}
+
 .search-results {
     padding: 0 2em;
     display: grid;
@@ -132,34 +159,14 @@ p {
   
 .search-results img:hover {
     transform: scale(1.05);
-} */
-
-.auskids-search-bar {
-    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
-    border-radius: 3px;
-    font-size: 13px;
-    font-style: italic;
-    padding-left: 7px;
-    height: 34px;
-    border: 1px solid rgb(192,192,192);
-    Width: 100%;
-}
-
-.search-icon {
-    border-radius: 2px;
-    padding-top: 2px;
-    border: 1px solid rgb(192,192,192);
-}
-
-.search-icon svg{
-    width: 100%;
-}
+} 
 
 .auskids-header-right {
     display: flex;
     justify-content: space-between;
     width: 25%;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .auskids-header-right svg {
@@ -197,46 +204,71 @@ p {
 }
 
 .auskids-main-nav {
+    padding: 10px 180px 10px 0px;
     width: 100%;
-}
-
-.auskids-main-nav-container {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
-}
-
-.auskids-list-item:last-child {
-    padding-right: 50px;
-}
-
-.auskids-list-item {
-    list-style: none;
-    font-weight: bold;
+    justify-content: space-between;
+    cursor: pointer;
     display: none;
-    cursor: pointer;
 }
 
-.auskids-list-item:hover {
-    color: red;
-}
-
-.auskids-list-item a{
+.auskids-main-nav a{
     text-decoration: none;
-    cursor: pointer;
+    color:#333;
+    padding: 0px 16px;
+    font-weight: bolder;
 }
+
+.auskids-main-nav a, .dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown a {
+    height: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 150%;
+    width: 280px;
+    background-color: rgba(108, 105, 105, 0.7);
+    display: none;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}
+
+.sub-menu a{
+    padding: 10px 32px 16px 16px;
+    color: #fff;
+}
+.dropdown:hover  {
+    color: #d76969;
+}
+.sub-menu a:hover {
+    background-color: #f6f6f6;
+    color: #333;
+}
+.dropdown:hover .sub-menu {
+    display: block;
+}
+  
 
 .side-menu-position {
     padding-top: 25px;
     position: fixed;
-    top: 85px;
+    top: 75px;
     left: 0;
     z-index: 2;
 }
   
 .side-menu-design {
     background-color: rgb(228, 212, 212);
-    width: 280px;
+    width: 240px;
     cursor: pointer;
     opacity: 0;
 }
@@ -251,8 +283,8 @@ p {
     display: flex;
     align-items: center;
     position: fixed; 
-    left: 245px;
-    top: 90px;
+    left: 200px;
+    top: 80px;
 }
 
 .side-menu-content {
@@ -271,89 +303,57 @@ p {
     color: grey;
 }
 
-
-.dropdown-menu {
-    background-color: rgba(248, 244, 244, 1);
-    box-shadow: 0 0 2rem rgba(0,0,0,.1);
-    display: none;
-    padding: 15px;
-    position: absolute; 
-    top: 121px; 
-    width: 250px;
-    z-index: 10;
-}
-  
-.dropdown-menu#menu-1 {
-    left: 60px;
-    width: 150px;
-}
-  
-.dropdown-menu#menu-2 {
-    left: 240px;
-    min-width: 150px;
-}
-  
-.dropdown-menu#menu-3 {
-    left: 390px;
-    min-width: 150px; 
-}
-  
-.dropdown-menu#menu-4 {
-    left: 520px;
-    min-width: 150px; 
-}
-
-.dropdown-menu#menu-5 {
-    left: 680px;
-    width: 150px; 
-}
-  
-.menu-item-list {
+.right-header-hover{
+    /* padding-top: 25px; */
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 2;
+    background-color:rgba(125, 120, 120, 0.9);
+    width: 60%;
+    cursor: pointer;
     margin: 0;
-    padding-left: 0;
-    list-style: none;
-}
-  
-.menu-item-list li a,
-.menu-item-list li a:visited,
-.menu-item-list li a:focus {
-    color: #454545;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-}
-  
-.menu-item-list li a:hover {
-    background-color: rgb(242,242,242);
-    color: #1264a3;
-}
-  
-.show {
-    display: block;
+    opacity: 0;
+    
 }
 
-.right-header-hover {
-    min-width: 80px;
-    font-size: 13px;
-    position: absolute;
-    top: 55px; 
-    white-space: nowrap;
-    display: none;
+.rhh-header {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 0px 5px;  
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    top: 70px; 
+    right: 0;
 }
 
 .right-header-hover-content {
-    list-style: none;
-    background-color: #c9c6c6;
-    padding: 4px;
+    color: #333;
+    font-size: 20px;
     display: flex;
-    justify-content: center;
-    border-radius: 3px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
 }
+
+.right-header-hover-content li{
+    list-style: none;
+}
+
+.right-header-hover-content li:hover a{
+    color: white;
+}
+
 
 .right-header-hover-content a{
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 } 
+
+.display {
+    opacity: 1;
+}
 
 @media (min-width: 768px) and (max-width: 960px){
     
@@ -365,42 +365,37 @@ p {
         display: none;
         visibility: hidden;
     }
-    
-    .auskids-list-item {
-        display: block;
-        
+    .side-menu-content {
+        display: none;
     }
-    .dropdown-menu {
-        top: 121px;
+    
+    .auskids-main-nav {
+        display: flex;
+    }
+    
+    .right-header-hover {
+        width: 50%;
+        height: 50px;
+    
+
     }
 
-    .dropdown-menu#menu-1 {
-        left: 40px;
-        width: 300px;
+    .rhh-header {
+        border-top-right-radius: 0;
+        top: 60px;
+        right: 0;
     }
-      
-    .dropdown-menu#menu-2 {
-        left: 210px;
-        min-width: 300px;
+
+    .right-header-hover-content{
+        font-size: 18px;
+        width: 60%;
+
     }
-      
-    .dropdown-menu#menu-3 {
-        left: 340px;
-        min-width: 300px; 
+
+    .right-header-hover-content a{
+        margin-top: 0
     }
-      
-    .dropdown-menu#menu-4 {
-        left: 450px;
-        min-width: 300px; 
-    }
-    
-    .dropdown-menu#menu-5 {
-        left: 600px;
-        min-width: 300px; 
-    }
-    /* .right-header-hover {
-        display: none;
-    } */
+
 
 }  
 
@@ -414,58 +409,36 @@ p {
         display: none; 
         visibility: hidden; 
     }
+    .auskids-main-nav {
+        display: flex;
+    }
+    
     .side-menu-content {
         display: none;
     }
-    
-    .auskids-list-item {
-        display: block;
-        
+
+    .right-header-hover{
+        top: 60px;
+        width: 30%;
+        height: 50px;
+        right: 0;
+        background-color:rgba(156, 153, 153, 0.8);
+    } 
+
+    .right-header-hover-content{
+        font-size: 20px;
     }
 
-    .dropdown-menu {
-        top: 160px;
-    }
+    .right-header-hover-content a {
+        margin: 10px;
 
-    .dropdown-menu#menu-1 {
-        left: 260px;
-        min-width: 300px;
     }
-      
-    .dropdown-menu#menu-2 {
-        left: 520px;
-        min-width: 300px;
+    .rhh-header {
+        border-top-right-radius: 0;
+        top: 70px;
+        margin-bottom: 0;
     }
-      
-    .dropdown-menu#menu-3 {
-        left: 760px;
-        min-width: 300px; 
-    }
-      
-    .dropdown-menu#menu-4 {
-        left: 960px;
-        min-width: 300px; 
-    }
-    
-    .dropdown-menu#menu-5 {
-        left: 1200px;
-        min-width: 300px; 
-    }
-
-    .right-header-hover#rhh1 {
-        right: 300px;
-    }
-
-    .right-header-hover#rhh2 {
-        right: 140px;
-    }
-
-    .right-header-hover#rhh3 {
-        right: 0px;
-    }
-    .display {
-        display: block;
-    }
+   
 }
 
 /* Auskids Mid Year Sales */
@@ -491,14 +464,6 @@ p {
     margin: 30px 0px;
     font-size: 16px;
 }
-
-/* .btn {
-    border: 1px solid red;
-    border-radius: 5px;
-    width: 150px;
-    margin: 10px auto;
-    cursor: pointer;
-} */
 
 .shop-now-btn{
    padding: 5px 0;
@@ -695,23 +660,17 @@ p {
 }
 
 .auskids-sales-containers {
+
 }
 .auskids-sales-indi {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    margin-bottom: 20px;
 }
 
-
-/* .sales-image-container {
-    width: 250px;
-    height: 180px;
-}  */
-
 .sales-image {
-    width: 250px;
+    width: 180px;
     height: 180px;
 }
 
@@ -758,6 +717,7 @@ p {
 
     .sales-image {
         width: 300px;
+        height: 200px;
     }
 
 
@@ -833,12 +793,12 @@ p {
 .new-arrivals-img-container svg {
     position: absolute;
     top: 2%;
-    right: 20%;
+    right: 23%;
 }
 
 .new-arrivals-image {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     object-fit: fill;
     
 }
@@ -861,14 +821,18 @@ p {
         grid-template-columns: 1fr 1fr;
         column-gap: 25px;
         row-gap: 25px;
+        padding: 0px;
     }
 
     .auskids-new-arrivals-indi-container{
-
     }
 
+    .new-arrivals-image {
+        width: 250px;
+        height: 250px;
+    }
     .new-arrivals-img-container svg {
-        right: 25%;
+        right: 20%;
 
     }
 
@@ -896,7 +860,7 @@ p {
 
     .new-arrivals-img-container svg {
         top: 5px;
-        right: 5%;
+        right: 15%;
     }
    
     .new-arrivals-image {
@@ -1011,14 +975,14 @@ p {
 
 .auskids-footer{
     background-color: dimgrey;
-    font-size: 12px;
+    font-size: 10px;
     color: #fff;  
     text-align: center;
 }
 
 .auskids-footer-container{
     width: 200px;
-    margin: 0 auto;
+    margin: 10px auto 0px;
     text-align: center;
 }
 
@@ -1028,7 +992,7 @@ p {
 }
 .list-item {
     list-style: none;
-    line-height: 2;
+    line-height: 1.5;
     
 }
 
@@ -1046,9 +1010,9 @@ p {
 }
 
 .fa {
-    padding: 5px;
-    font-size: 16px;
-    width: 25px;
+    padding: 4px;
+    font-size: 14px;
+    width: 20px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -1075,7 +1039,7 @@ p {
 }
 
 .copyright {
-    font-size: 10px;
+    font-size: 9px;
     padding-bottom: 10px;
 }
 

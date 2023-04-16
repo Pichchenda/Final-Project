@@ -7,6 +7,9 @@
 // })
 
 
+
+
+
 //Side Menu
 const sideMenu = document.getElementById('side-menu');
 const menuTrigger = document.getElementById('menu-trigger');
@@ -24,81 +27,6 @@ function sideMenuDisappears (){
 
 menuClose.addEventListener('click', sideMenuDisappears);
 
-//Dropdown Menu
-const menu1 = document.getElementById('menu-1');
-const menu2 = document.getElementById('menu-2');
-const menu3 = document.getElementById('menu-3');
-const menu4 = document.getElementById('menu-4');
-const menu5 = document.getElementById('menu-5');
-const menu1Btn = document.getElementById('menu-1-button');
-const menu2Btn = document.getElementById('menu-2-button');
-const menu3Btn = document.getElementById('menu-3-button');
-const menu4Btn = document.getElementById('menu-4-button');
-const menu5Btn = document.getElementById('menu-5-button');
-
-
-function showMenu1() {
-  menu1.classList.add('show');
-  menu2.classList.remove('show');
-  menu3.classList.remove('show');
-  menu4.classList.remove('show');
-  menu5.classList.remove('show');
-}
-
-function showMenu2() {
-  menu1.classList.remove('show');
-  menu2.classList.add('show');
-  menu3.classList.remove('show');
-  menu4.classList.remove('show');
-  menu5.classList.remove('show');
-}
-
-function showMenu3() {
-  menu1.classList.remove('show');
-  menu2.classList.remove('show');
-  menu3.classList.add('show');
-  menu4.classList.remove('show');
-  menu5.classList.remove('show');
-}
-
-function showMenu4() {
-  menu1.classList.remove('show');
-  menu2.classList.remove('show');
-  menu3.classList.remove('show');
-  menu4.classList.add('show');
-  menu5.classList.remove('show');
-}
-
-function showMenu5() {
-  menu1.classList.remove('show');
-  menu2.classList.remove('show');
-  menu3.classList.remove('show');
-  menu4.classList.remove('show');
-  menu5.classList.add('show');
-}
-
-function hideMenu() {
-  menu1.classList.remove('show'); 
-  menu2.classList.remove('show'); 
-  menu3.classList.remove('show');
-  menu4.classList.remove('show');
-  menu5.classList.remove('show');
-}
-
-menu1Btn.addEventListener('mouseover', showMenu1);
-menu2Btn.addEventListener('mouseover', showMenu2);
-menu3Btn.addEventListener('mouseover',showMenu3);
-menu4Btn.addEventListener('mouseover',showMenu4);
-menu5Btn.addEventListener('mouseover',showMenu5);
-
-menu1.addEventListener('mouseleave', hideMenu);
-menu2.addEventListener('mouseleave', hideMenu);
-menu3.addEventListener('mouseleave', hideMenu);
-menu4.addEventListener('mouseleave', hideMenu);
-menu5.addEventListener('mouseleave', hideMenu);
-
-
-
 
 //Right Header Hover
 const rhh1 = document.getElementById('rhh1');
@@ -107,6 +35,9 @@ const rhh3 = document.getElementById('rhh3');
 const icon1 = document.getElementById('icon-1');
 const icon2 = document.getElementById('icon-2');
 const icon3 = document.getElementById('icon-3');
+const rhh1Close = document.getElementById('rhh1-close');
+const rhh2Close = document.getElementById('rhh2-close');
+const rhh3Close = document.getElementById('rhh3-close');
 
 function displayText1() {
   rhh1.classList.add('display');
@@ -134,14 +65,16 @@ function hideText() {
 
 }
 
-icon1.addEventListener('mouseover', displayText1);
-icon2.addEventListener('mouseover', displayText2);
-icon3.addEventListener('mouseover', displayText3);
+icon1.addEventListener('click', displayText1);
+icon2.addEventListener('click', displayText2);
+icon3.addEventListener('click', displayText3);
 
 
-rhh1.addEventListener('mouseleave', hideText);
-rhh2.addEventListener('mouseleave', hideText);
-rhh3.addEventListener('mouseleave', hideText);
+rhh1Close.addEventListener('click', hideText);
+rhh2Close.addEventListener('click', hideText);
+rhh3Close.addEventListener('click', hideText);
+
+
 
 // Mid Year Sales - Slide Show
 
@@ -208,6 +141,13 @@ for(let i = 0; i < heartIcons.length; i++){
 })
 }
 
+
+function addToWishList(){
+  //if hearticon background fill === 'none',
+  // backgroundFill = 'red';
+  //increment(); 
+}
+
 var globalCounter = 0;
 function increment(){
   globalCounter += 1;
@@ -215,12 +155,6 @@ function increment(){
   counter.textContent = globalCounter;
 }
 
-  
-  // wishListCount.textContent = heartIcons.length;
-
-
-
-// wishListCount.addEventListener('event', addToWishlist);
 
 
 // JS Dom - Sales
@@ -232,7 +166,6 @@ for(let i = 0; i < sales.length; i++){
   const sale = sales[i];
   const div = document.createElement('div');
   div.classList.add('auskids-sales-indi');
-  console.log(div);
   
 
   const img = document.createElement('img')
@@ -254,3 +187,71 @@ for(let i = 0; i < sales.length; i++){
   salesContainer.append(div);
 
 }
+
+// Search Products
+
+
+let items = [
+  {
+    'name': '2pcs Girls Fashion Off Shoulder Tops+Bowknot Pants', 'source':'.img/search product 1.jpeg'
+  }, 
+  { 
+    'name': 'Girl Tutu Dress', 'source': './img/search product 2.jpeg'
+  }, 
+  {
+    'name': 'Baby Boy outfit Set', 'source' : './img/search product 3.jpeg'
+  },
+  {
+    'name': 'Unisex Newborn Hooded Romper Jumpsuit','source' : './img/search product 4.jpeg'
+  }, 
+  {
+    'name' : '2pcs Newborn Outfit Gift set', 'source': './img/search product 5.jpeg'
+  }, 
+  {
+    'name' : 'Kid Pokemon School Bag', 'source' : './img/search product 6.jpeg'
+  }, 
+  {
+    'name' : 'Unisex Mickey Mouse Travel Backpack', 'source': './img/search product 7.jpeg'
+  },
+  {
+    'name' : 'Kids Love Heart Anti-UV Sunglasses', 'source' : './img/search product 8.jpeg'
+  }, 
+  {
+    'name' : 'Kids Spiderman Watch', 'source' : './img/search product 9.jpeg'
+  },
+  {
+    'name' : 'Kids Winter Jacket', 'source' : './img/search product 10.jpeg'
+  }
+];
+const searchForm = document.querySelector('#search-form');
+const searchInput = document.querySelector('#search-input');
+const searchResults = document.querySelector('#search-results');
+
+function createResultElement(result){
+  const product = document.createElement('img');
+  product.src = result.imgSrc;
+  return product;
+}
+
+function searchProducts(event){
+  event.preventDefault();
+  const search = searchInput.value.trim();
+  if (search) {
+    return;
+  }
+  // searchInput.value = "";
+  // searchInput.focus();
+  searchResults.innerHTML = "";
+  const results = items;
+  if(results){
+    for(let i = 0; i < items.length; i++){
+      const item = items[i];
+      const resultElement = createResultElement(item);
+      searchResults.append(resultElement); 
+    }
+  } else {
+    searchResults.innerHTML = '<p>Not Found</p>';
+  } 
+}
+
+searchForm.addEventListener('submit', searchProducts); 

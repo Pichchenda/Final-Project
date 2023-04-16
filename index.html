@@ -19,14 +19,14 @@
                     <img class="auskids-logo" src="./img/Auskids Logo.png" alt="Auskids Logo">
                 </div>
                 <div class="auskids-header-middle">
-                  <form class="products-search">
-                  <input class="auskids-search-bar" type="text" placeholder="Products/Names">
-                  <button class="search-icon">
-                    <svg width="24px" height="24px" viewBox="0 0 24 24" focusable="false"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Search" stroke="currentColor"><circle vector-effect="non-scaling-stroke" id="Oval-13" cx="10.5" cy="10.5" r="7"></circle><path vector-effect="non-scaling-stroke" d="M15.510498,15.2756348 L21.6812898,21.4464265" id="Path-2"></path></g></g></svg>
-                  </button>
+                  <form id="search-form" class="products-search">
+                    <input id="search-input" class="auskids-search-bar" type="text" placeholder="Products/Names">
+                    <button id="submit" class="search-icon" type="submit">
+                      <svg width="24px" height="24px" viewBox="0 0 24 24" focusable="false"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Search" stroke="currentColor"><circle vector-effect="non-scaling-stroke" id="Oval-13" cx="10.5" cy="10.5" r="7"></circle><path vector-effect="non-scaling-stroke" d="M15.510498,15.2756348 L21.6812898,21.4464265" id="Path-2"></path></g></g></svg>
+                    </button>
                   </form>
-                  <section class="search-results"></section>
-                  <div class="modal">
+                  <div id="search-results" class="search-results"></div>
+                  <!-- <div class="modal">
                     <div class="modal-content-wrapper">
                       <button class="modal-close">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -43,9 +43,9 @@
                       </button>
                       <div class="modal-content"></div>
                     </div>
-                  </div>
+                  </div> --> 
                 </div>
-                <div class="auskids-header-right">
+                <div class="auskids-header-right" id="icons">
                   <div id="icon-1" class="icon">
                     <svg width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-automation="logged-out"><path d="m2 22c0-4.4872 5.47619-8.3333 10-8.3333m0 0c4.5238 0 10 3.8461 10 8.3333m-10-8.3333c3.2217 0 5.8333-2.6117 5.8333-5.83337 0-3.22166-2.6116-5.83333-5.8333-5.83333-3.22166 0-5.83333 2.61167-5.83333 5.83333 0 3.22167 2.61167 5.83337 5.83333 5.83337z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
                   </div>
@@ -65,7 +65,7 @@
                 <img class="hamburger-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/hamburger.svg" alt="Hamburger Icon">
               </div>
               <div class="auskids-main-nav">
-                <!-- <div class="dropdown">
+                <div class="dropdown">
                   <a href="#">New Arrivals</a>
                   <div class="sub-menu">
                     <a href="#">Clothes</a>
@@ -108,14 +108,7 @@
                     <a href="#">Toys</a>
                     <a href="#">Accessories</a>
                   </div>
-                </div> -->
-                <ul class="auskids-main-nav-container">
-                  <li id="menu-1-button" class="auskids-list-item"><a href="#"></a>New Arrivals</li>
-                  <li id="menu-2-button" class="auskids-list-item"><a href="#"></a>Clothings</li>
-                  <li id="menu-3-button" class="auskids-list-item"><a href="#"></a>Toys</li>
-                  <li id="menu-4-button" class="auskids-list-item"><a href="#"></a>Accessories</li>
-                  <li id="menu-5-button" class="auskids-list-item"><a href="#"></a>Sales</li>
-                </ul>
+                </div>
               </div>
             </div>
         <aside class="side-menu-position side-menu-design" id="side-menu">
@@ -131,78 +124,48 @@
               <li>Sales</li>
             </ul>
         </aside>
-        <aside class="dropdown-menu" id="menu-1">
-            <ul class="menu-item-list">
-              <li><a href="#">Clothes</a></li>
-              <li><a href="#">Toys</a></li>
-              <li><a href="#">Accessories</a></li>
-            </ul>
-          </aside>
-          <aside class="dropdown-menu" id="menu-2">
-            <ul class="menu-item-list">
-              <li><a href="#">Babies</a></li>
-              <li><a href="#">Boys</a></li>
-              <li><a href="#">Grils</a></li>
-            </ul>
-          </aside>   
-          <aside class="dropdown-menu" id="menu-3">
-            <ul class="menu-item-list">
-              <li><a href="#">Toddler &amp Preschool Toys</a></li>
-              <li><a href="#">Role Play</a></li>
-              <li><a href="#">Toy Vehicles &amp Playsets</a></li>
-              <li><a href="#">Educational Toys</a></li>
-              <li><a href="#">Outdoor Toys &amp Activities</a></li>
-            </ul>
-          </aside>          
-          <aside class="dropdown-menu" id="menu-4">
-            <ul class="menu-item-list">
-              <li><a href="#">Shoes</a></li>
-              <li><a href="#">Sunglasses</a></li>
-              <li><a href="#">Watches</a></li>
-              <li><a href="#">Bags &amp Wallets</a></li>
-              <li><a href="#">Hair Accessories</a></li>
-            </ul>
-          </aside> 
-          <aside class="dropdown-menu" id="menu-5">
-            <ul class="menu-item-list">
-              <li><a href="#">Clothes</a></li>
-              <li><a href="#">Toys</a></li>
-              <li><a href="#">Accessories</a></li>
-            </ul>
-          </aside> 
-          <aside class="right-header-hover" id="rhh1">
-            <ul class="right-header-hover-content">
-              <li>
-                <a href="#">Log In</a>
-              </li>
-              <li>
-                <a href="#">/</a>
-              </li>
-              <li>
-                <a href="#">Join</a>
-              </li>
-            </ul>
-          </aside>
-          <aside class="right-header-hover" id="rhh2">
-            <ul class="right-header-hover-content >
+        <aside class="right-header-hover" id="rhh1"> 
+          <header class="rhh-header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="" id="rhh1-close">
+          </header>
+          <ul class="right-header-hover-content">
+            <li>
+              <a href="#">Log In</a>
+            </li>
+            <li>
+              <a href="#">/</a>
+            </li>
+            <li>
+              <a href="#">Join</a>
+            </li>
+          </ul>
+        </aside>
+        <aside class="right-header-hover" id="rhh2">
+          <header class="rhh-header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="" id="rhh2-close">
+          </header>
+          <ul class="right-header-hover-content" >
               <li>
                 <a href="#">Wishlists</a>
               </li>
-            </ul>
-          </aside>
-          <aside class="right-header-hover" id="rhh3">
-            <ul class="right-header-hover-content >
+          </ul>
+        </aside>
+        <aside class="right-header-hover" id="rhh3">
+          <header class="rhh-header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="" id="rhh3-close">
+          </header>
+          <ul class="right-header-hover-content">
               <li>
                 <a href="#">Shopping Bag</a>
               </li>
-            </ul>
-          </aside>
+          </ul>
+        </aside>
         <section class="auskids-mid-year-sales">
           <div class="auskids-mid-year-sales-info">
               <h1 class="mid-year-sales-tittle">Mid Year Sales Is Now On!</h1>
               <div>
                 <h3 class="mid-year-sales-details ">Save up to 50% of babies' clothes, toys and more...</h3>
-                <button class="shop-now btn">Shop Now</button>
+                <button class="shop-now-btn">Shop Now</button>
               </div>  
           </div> 
           <div class="auskids-slideshow">
@@ -211,7 +174,7 @@
                 <img id="tv-screen" src='./img/Mid Year Sales.jpeg' alt="">
                 <div class="text">
                   <h1>Save up to 50% for babies and toddlers' clothes, toys and more....</h1>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
                 </div>
               </div>
             </div>  
@@ -228,28 +191,7 @@
         </section>
         <section class="auskids-sales">
             <h2 class="auskids-sales-title">Sales By Categories</h2>
-            <div class="auskids-sales-containers" id="sales-container"> 
-                <!-- <div class="auskids-sales-indi" > -->
-                    <!-- <div class="sales-image-container"> -->
-                        <!-- <img class="sales-image" src="./img/Sales Clothing.jpeg" alt="Cloth Sales"> -->
-                    <!-- </div>   -->
-                    <!-- <p class="sales-detail">Clothes</p> -->
-                    <!-- <button class="shop-now btn">Shop Now</button> -->
-                <!-- </div> -->
-                <!-- <div id="sales-indi" class="auskids-sales-indi">
-                    <div class="sales-image-container">
-                        <img class="sales-image" src="./img/Sales Toy.jpeg" alt="Toy Sales">
-                    </div>
-                    <p class="sales-detail">Toys</p>
-                    <button class="shop-now btn">Shop Now</button>
-                </div> -->
-                <!-- <div class="auskids-sales-indi" id="accessories">
-                    <div class="sales-image-container"> 
-                      <img class="sales-image" src="./img/Sales Accessories.jpeg" alt="Accessories Sales">
-                    </div>
-                    <p class="sales-detail">Accessories</p>
-                    <button class="shop-now btn">Shop Now</button>
-                </div> -->
+            <div class="auskids-sales-containers" id="sales-container">     
             </div>  
         </section>
         <section class="auskids-new-arrivals">
@@ -266,7 +208,7 @@
                         <p>Squirrel Crew Neck Jumper</p>
                         <p>$39.99</p>
                     </div> 
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -277,7 +219,7 @@
                         <p>Pink Casual Summner Dress</p>
                         <p>$29.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -288,7 +230,7 @@
                         <p>Girls High Top Casual Shoes</p>
                         <p>$49.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -299,7 +241,7 @@
                         <p>Denim Jacket</p>
                         <p>$39.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -310,7 +252,7 @@
                         <p>Super Mario Licence T-Shirt</p>
                         <p>$14.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -321,7 +263,7 @@
                         <p>Rabbits Knit Jumper</p>
                         <p>$39.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -332,7 +274,7 @@
                         <p>Baby Overalls Set</p>
                         <p>$34.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
@@ -343,7 +285,7 @@
                         <p>Girl's Denim Dungaree Set</p>
                         <p>$44.99</p>
                     </div>
-                  <button class="shop-now btn">Shop Now</button>
+                  <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                     <div class="new-arrivals-img-container">
@@ -354,7 +296,7 @@
                         <p>Bunny Knit Jumper</p>
                         <p>$24.99</p>
                     </div>
-                    <button class="shop-now btn">Shop Now</button>
+                    <button class="shop-now-btn">Shop Now</button>
               </div>
             </div>
       </section>
