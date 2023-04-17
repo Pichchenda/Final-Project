@@ -68,7 +68,7 @@ rhh3Close.addEventListener('click', hideText);
 
 const prevBtn =  document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
-const pageScreen = document.querySelector('#tv-screen');
+const pageScreen = document.querySelector('#page-screen');
 
 function nextSlide() {
   const currentSrc = pageScreen.getAttribute('src');
@@ -164,10 +164,98 @@ for(let i = 0; i < sales.length; i++){
 
 }
 
+// New Arrivals 
+
+
+const newArrivals = [
+  {
+      "img1src" : "", 
+      "img2src" : "",
+      "name": "",
+      "price": "$",
+      "button" : "",
+  },
+  {
+    "img1src" : "", 
+    "img2src" : "",
+    "name": "",
+    "price": "$",
+    "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+{
+  "img1src" : "", 
+  "img2src" : "",
+  "name": "",
+  "price": "$",
+  "button" : "",
+},
+];
+
+
+// <div class="auskids-new-arrivals-indi-container">
+{/* <div class="new-arrivals-img-container">
+      <img class="new-arrivals-image" src="./img/New Arrivals 1.jpeg">
+      <img class="heart-icon" src="./heart-icon.svg" alt="">
+    </div>
+    <p>Squirrel Crew Neck Jumper</p>
+    <p>$39.99</p>
+    <button class="shop-now-btn">Shop Now</button>
+  </div>   */}
+const newArrivalsContainer = document.querySelector('#new-arrivals-container');
+
+const div = document.createElement('div');
+div.classList.add('new-arrivals-img-container')
+
+const img1 = document.createElement('img');
+img1.classList.add('new-arrivals-image');
+
+
+
 // Search Products
 
-
-let items = [
+const items = [
   {
     'name': '2pcs Girls Fashion Off Shoulder Tops+Bowknot Pants', 'source':'.img/search product 1.jpeg'
   }, 
@@ -221,9 +309,9 @@ function searchProducts(event){
   searchResults.innerHTML = "";
   const results = items.filter(item => item.name.includes(search));
 
-  // if (results.length == 0) {
-  //   return;
-  // }
+  if (results.length == 0) {
+    return;
+  }
 
   if(results){
     for(let i = 0; i < results.length; i++){
