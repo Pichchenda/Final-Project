@@ -1,15 +1,3 @@
-//Modal Close
-// document.body.addEventListener('click', (event) => {
-//   if (!event.target.closest('.modal') || event.target.closest('.modal-content')) {
-//     return
-//   }
-//   modal.classList.remove('show');
-// })
-
-
-
-
-
 //Side Menu
 const sideMenu = document.getElementById('side-menu');
 const menuTrigger = document.getElementById('menu-trigger');
@@ -80,45 +68,37 @@ rhh3Close.addEventListener('click', hideText);
 
 const prevBtn =  document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
-const tvScreen = document.querySelector('#tv-screen');
-const slideShows = document.querySelectorAll('.slide-show');
+const pageScreen = document.querySelector('#tv-screen');
 
 function nextSlide() {
-  const currentSrc = tvScreen.getAttribute('src');
-  if(currentSrc === './img/Mid Year Sales.jpeg'){
-    tvScreen.src = './img/mid-year-sales 2.jpg';
+  const currentSrc = pageScreen.getAttribute('src');
+  if(currentSrc === './img/Mid Year Sales.jpeg' || currentSrc === './img/mid-year-sales 1.jpeg'){
+    pageScreen.src = './img/mid-year-sales 2.jpg';
   } else if (currentSrc === './img/mid-year-sales 2.jpg'){
-    tvScreen.src = './img/mid-year-sales 3.jpg';
+    pageScreen.src = './img/mid-year-sales 3.jpg';
+  } else if(currentSrc === './img/mid-year-sales 3.jpg'){
+    pageScreen.src = './img/mid-year-sales 4.jpg';
   } else {
-    tvScreen.src = 'img/mid-year-sales 4.jpg';
-  } 
-  
+    pageScreen.src = './img/mid-year-sales 1.jpeg';
+  }
 }
 nextBtn.addEventListener('click', nextSlide);
 
 function prevSlide (){
-  const currentSrc = tvScreen.getAttribute('src');
-  if(currentSrc === "img/mid-year-sales 4.jpg"){
-   tvScreen.src = "./img/mid-year-sales 3.jpg";
-  } else if(currentSrc === "./img/mid-year-sales 3.jpg"){
-    tvScreen.src = "img/mid-year-sales 2.jpg";
+  const currentSrc = pageScreen.getAttribute('src');
+  if(currentSrc === './img/mid-year-sales 4.jpg'){
+   pageScreen.src = './img/mid-year-sales 3.jpg';
+  } else if(currentSrc === './img/mid-year-sales 3.jpg'){
+    pageScreen.src = './img/mid-year-sales 2.jpg';
+  } else if (currentSrc === './img/mid-year-sales 2.jpg'){
+    pageScreen.src = './img/mid-year-sales 1.jpeg';
   } else {
-    tvScreen = "./img/Mid Year Sales.jpeg";
+    pageScreen.src = './img/mid-year-sales 4.jpg';
   }
 }
 
 prevBtn.addEventListener('click', prevSlide );
 
-for (let i = 0; i < slideShows.length; i++) {
-  const slideShow = slideShows[i];
-  const imgSrc = slideShow.getAttribute('src');
-  
-  function changeSlide(){
-    tvScreen.src = imgSrc;
-  }
-  
-  slideShow.addEventListener('click', changeSlide);
-}
 // Wishlist 
 
 const wishListCount = document.querySelector('#wish-list-count');
@@ -126,41 +106,37 @@ const heartIcons = document.querySelectorAll('.heart-icon');
 
 for(let i = 0; i < heartIcons.length; i++){
   let heartIcon = heartIcons[i]; 
-  function backgroundFill (color){
-  heartIcon = heartIcon.style.fill = color;
-  increment();
-}
-  // heartIcon.addEventListener('click', backgroundFill("red"));
-  heartIcon.addEventListener('click', function checkStyleIcon(e) {
-    // let getSvg = document.getElementsByClassName('.heart-icon')[i].style.fill;
-    // console.log("fdshjfkdshfkdslhf" + heartIcons[i].getAttribute('fill'))
-    if (heartIcons[i].getAttribute('fill') === "none") {
-      backgroundFill("red");
-      console.log(e)
+
+  function updateWishList (){
+    if (!heartIcon.style.fill || heartIcon.style.fill === "none"  ) {
+      heartIcon.style.fill = "red";
+      increment();
+    } else {
+      heartIcon.style.fill = "none";
+      decrement();
     }
-})
+  }
+
+  heartIcon.addEventListener('click', updateWishList);
+
 }
 
-
-function addToWishList(){
-  //if hearticon background fill === 'none',
-  // backgroundFill = 'red';
-  //increment(); 
-}
-
-var globalCounter = 0;
+let list = 0;
 function increment(){
-  globalCounter += 1;
+  list += 1;
   let counter = wishListCount;
-  counter.textContent = globalCounter;
+  counter.textContent = list;
 }
 
-
+function decrement(){
+  list -= 1
+  let counter = wishListCount;
+  counter.textContent = list;
+}
 
 // JS Dom - Sales
 
 const salesContainer= document.querySelector('#sales-container');
-
 
 for(let i = 0; i < sales.length; i++){
   const sale = sales[i];
@@ -227,31 +203,38 @@ const searchForm = document.querySelector('#search-form');
 const searchInput = document.querySelector('#search-input');
 const searchResults = document.querySelector('#search-results');
 
-function createResultElement(result){
+function createResultElement(item){
   const product = document.createElement('img');
-  product.src = result.imgSrc;
+  product.src = item.source;
   return product;
 }
 
 function searchProducts(event){
+  
   event.preventDefault();
   const search = searchInput.value.trim();
-  if (search) {
+  
+  if (!search) {
     return;
   }
-  // searchInput.value = "";
-  // searchInput.focus();
+  
   searchResults.innerHTML = "";
-  const results = items;
+  const results = items.filter(item => item.name.includes(search));
+
+  // if (results.length == 0) {
+  //   return;
+  // }
+
   if(results){
-    for(let i = 0; i < items.length; i++){
-      const item = items[i];
+    for(let i = 0; i < results.length; i++){
+      const item = results[i];
       const resultElement = createResultElement(item);
       searchResults.append(resultElement); 
     }
   } else {
     searchResults.innerHTML = '<p>Not Found</p>';
   } 
+  return;
 }
 
 searchForm.addEventListener('submit', searchProducts); 
