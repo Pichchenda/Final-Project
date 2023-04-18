@@ -1,19 +1,37 @@
-//Side Menu
-const sideMenu = document.getElementById('side-menu');
-const menuTrigger = document.getElementById('menu-trigger');
-const menuClose = document.getElementById('menu-close');
+// Wishlist 
 
-function sideMenuAppears (){
-  sideMenu.classList.add('show-menu');  
+const wishListCount = document.querySelector('#wish-list-count');
+const heartIcons = document.querySelectorAll('.heart-icon');
+
+for(let i = 0; i < heartIcons.length; i++){
+  let heartIcon = heartIcons[i]; 
+
+  function updateWishList (){
+    if (!heartIcon.style.fill || heartIcon.style.fill === "none"  ) {
+      heartIcon.style.fill = "red";
+      increment();
+    } else {
+      heartIcon.style.fill = "none";
+      decrement();
+    }
+  }
+
+  heartIcon.addEventListener('click', updateWishList);
+
 }
 
-menuTrigger.addEventListener('click',sideMenuAppears);
-
-function sideMenuDisappears (){
-  sideMenu.classList.remove('show-menu');
+let list = 0;
+function increment(){
+  list += 1;
+  let counter = wishListCount;
+  counter.textContent = list;
 }
 
-menuClose.addEventListener('click', sideMenuDisappears);
+function decrement(){
+  list -= 1
+  let counter = wishListCount;
+  counter.textContent = list;
+}
 
 
 //Right Header Hover
@@ -62,6 +80,23 @@ rhh1Close.addEventListener('click', hideText);
 rhh2Close.addEventListener('click', hideText);
 rhh3Close.addEventListener('click', hideText);
 
+//Side Menu
+
+const sideMenu = document.getElementById('side-menu');
+const menuTrigger = document.getElementById('menu-trigger');
+const menuClose = document.getElementById('menu-close');
+
+function sideMenuAppears (){
+  sideMenu.classList.add('show-menu');  
+}
+
+menuTrigger.addEventListener('click',sideMenuAppears);
+
+function sideMenuDisappears (){
+  sideMenu.classList.remove('show-menu');
+}
+
+menuClose.addEventListener('click', sideMenuDisappears);
 
 
 // Mid Year Sales - Slide Show
@@ -99,42 +134,27 @@ function prevSlide (){
 
 prevBtn.addEventListener('click', prevSlide );
 
-// Wishlist 
 
-const wishListCount = document.querySelector('#wish-list-count');
-const heartIcons = document.querySelectorAll('.heart-icon');
-
-for(let i = 0; i < heartIcons.length; i++){
-  let heartIcon = heartIcons[i]; 
-
-  function updateWishList (){
-    if (!heartIcon.style.fill || heartIcon.style.fill === "none"  ) {
-      heartIcon.style.fill = "red";
-      increment();
-    } else {
-      heartIcon.style.fill = "none";
-      decrement();
-    }
-  }
-
-  heartIcon.addEventListener('click', updateWishList);
-
-}
-
-let list = 0;
-function increment(){
-  list += 1;
-  let counter = wishListCount;
-  counter.textContent = list;
-}
-
-function decrement(){
-  list -= 1
-  let counter = wishListCount;
-  counter.textContent = list;
-}
 
 // JS Dom - Sales
+
+const sales = [
+  {
+      "source" : "./img/Sales Clothing.jpeg", 
+      "detail1": "Clothes",
+      "detail2": "Shop Now"
+  },
+  {
+      "source": "./img/Sales Toy.jpeg",
+      "detail1": "Toys",
+      "detail2":"Shop Now"
+  },
+  {
+      "source":"./img/Sales Accessories.jpeg"
+      ,"detail1":"Accessories",
+      "detail2":"Shop Now"
+  }
+];
 
 const salesContainer= document.querySelector('#sales-container');
 
@@ -167,90 +187,109 @@ for(let i = 0; i < sales.length; i++){
 // New Arrivals 
 
 
-const newArrivals = [
-  {
-      "img1src" : "", 
-      "img2src" : "",
-      "name": "",
-      "price": "$",
-      "button" : "",
-  },
-  {
-    "img1src" : "", 
-    "img2src" : "",
-    "name": "",
-    "price": "$",
-    "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-{
-  "img1src" : "", 
-  "img2src" : "",
-  "name": "",
-  "price": "$",
-  "button" : "",
-},
-];
+// const newArrivals = [
+//   {
+//     "img1src" : "./img/New Arrivals 1.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Squirrel Crew Neck Jumper",
+//     "price": "$39.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 2.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Pink Casual Summner Dress",
+//     "price": "$29.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 3.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Girls High Top Casual Shoes",
+//     "price": "$49.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 4.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Denim Jacket",
+//     "price": "$39.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 5.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Super Mario Licence T-Shirt",
+//     "price": "$14.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 6.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Rabbits Knit Jumper",
+//     "price": "$39.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 7.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Baby Overalls Set",
+//     "price": "$34.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 8.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Girl's Denim Dungaree Set",
+//     "price": "$44.99",
+//     "button" : "Shop Now",
+//   },
+//   {
+//     "img1src" : "./img/New Arrivals 9.jpeg", 
+//     "img2src" : "./heart-icon.svg",
+//     "name": "Bunny Knit Jumper",
+//     "price": "$24.99",
+//     "button" : "Shop Now",
+//   }
+// ];
 
 
-// <div class="auskids-new-arrivals-indi-container">
-{/* <div class="new-arrivals-img-container">
-      <img class="new-arrivals-image" src="./img/New Arrivals 1.jpeg">
-      <img class="heart-icon" src="./heart-icon.svg" alt="">
-    </div>
-    <p>Squirrel Crew Neck Jumper</p>
-    <p>$39.99</p>
-    <button class="shop-now-btn">Shop Now</button>
-  </div>   */}
-const newArrivalsContainer = document.querySelector('#new-arrivals-container');
+// const newArrivalsContainer = document.querySelector('#new-arrivals-container');
 
-const div = document.createElement('div');
-div.classList.add('new-arrivals-img-container')
 
-const img1 = document.createElement('img');
-img1.classList.add('new-arrivals-image');
+// for(let i = 0; i < newArrivals.length; i++){
+  
+//   const newArrival = newArrivals[i];
+//   const div = document.createElement('div');
+//   div.classList.add('auskids-new-arrivals-indi-container');
 
+//   const img1 = document.createElement('img');
+//   img1.classList.add('new-arrivals-image');
+//   img1.src = newArrival.img1src;
+//   div.append(img1);
+   
+//   const img2 = document.createElement('img');
+//   img2.src = newArrival.img2src;
+//   img2.classList.add('heart-icon');
+//   div.append(img2);
+    
+//   const name = document.createElement('p');
+//   name.textContent = newArrival.name;
+//   div.append(name);
+
+//   const price = document.createElement('p');
+//   price.textContent = newArrival.price;
+//   div.append(price);
+
+//   const btn = document.createElement('button');
+//   btn.classList.add('shop-now-btn');
+//   btn.textContent = newArrival.button;
+//   div.append(btn);
+
+//   newArrivalsContainer.append(div);
+//   console.log(newArrivalsContainer);
+
+// }
 
 
 // Search Products
@@ -287,6 +326,7 @@ const items = [
     'name' : 'Kids Winter Jacket', 'source' : './img/search product 10.jpeg'
   }
 ];
+
 const searchForm = document.querySelector('#search-form');
 const searchInput = document.querySelector('#search-input');
 const searchResults = document.querySelector('#search-results');
@@ -307,11 +347,7 @@ function searchProducts(event){
   }
   
   searchResults.innerHTML = "";
-  const results = items.filter(item => item.name.includes(search));
-
-  if (results.length == 0) {
-    return;
-  }
+  const results = items.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
 
   if(results){
     for(let i = 0; i < results.length; i++){
