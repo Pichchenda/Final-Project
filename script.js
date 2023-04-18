@@ -7,6 +7,7 @@ for(let i = 0; i < heartIcons.length; i++){
   let heartIcon = heartIcons[i]; 
 
   function updateWishList (){
+
     if (!heartIcon.style.fill || heartIcon.style.fill === "none"  ) {
       heartIcon.style.fill = "red";
       increment();
@@ -62,7 +63,6 @@ function displayText3() {
   rhh2.classList.remove('display');
   rhh3.classList.add('display');
 }
-
 
 function hideText() {
   rhh1.classList.remove('display'); 
@@ -135,7 +135,6 @@ function prevSlide (){
 prevBtn.addEventListener('click', prevSlide );
 
 
-
 // JS Dom - Sales
 
 const sales = [
@@ -159,11 +158,11 @@ const sales = [
 const salesContainer= document.querySelector('#sales-container');
 
 for(let i = 0; i < sales.length; i++){
+
   const sale = sales[i];
   const div = document.createElement('div');
   div.classList.add('auskids-sales-indi');
   
-
   const img = document.createElement('img')
   img.src = sale.source;
   img.classList.add('sales-image');
@@ -174,7 +173,6 @@ for(let i = 0; i < sales.length; i++){
   detail1.classList.add('sales-detail')
   div.append(detail1);
 
-  
   const detail2 = document.createElement('button');
   detail2.classList.add('shop-now-btn');
   detail2.textContent = sale.detail2;
@@ -183,113 +181,6 @@ for(let i = 0; i < sales.length; i++){
   salesContainer.append(div);
 
 }
-
-// New Arrivals 
-
-
-// const newArrivals = [
-//   {
-//     "img1src" : "./img/New Arrivals 1.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Squirrel Crew Neck Jumper",
-//     "price": "$39.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 2.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Pink Casual Summner Dress",
-//     "price": "$29.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 3.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Girls High Top Casual Shoes",
-//     "price": "$49.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 4.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Denim Jacket",
-//     "price": "$39.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 5.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Super Mario Licence T-Shirt",
-//     "price": "$14.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 6.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Rabbits Knit Jumper",
-//     "price": "$39.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 7.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Baby Overalls Set",
-//     "price": "$34.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 8.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Girl's Denim Dungaree Set",
-//     "price": "$44.99",
-//     "button" : "Shop Now",
-//   },
-//   {
-//     "img1src" : "./img/New Arrivals 9.jpeg", 
-//     "img2src" : "./heart-icon.svg",
-//     "name": "Bunny Knit Jumper",
-//     "price": "$24.99",
-//     "button" : "Shop Now",
-//   }
-// ];
-
-
-// const newArrivalsContainer = document.querySelector('#new-arrivals-container');
-
-
-// for(let i = 0; i < newArrivals.length; i++){
-  
-//   const newArrival = newArrivals[i];
-//   const div = document.createElement('div');
-//   div.classList.add('auskids-new-arrivals-indi-container');
-
-//   const img1 = document.createElement('img');
-//   img1.classList.add('new-arrivals-image');
-//   img1.src = newArrival.img1src;
-//   div.append(img1);
-   
-//   const img2 = document.createElement('img');
-//   img2.src = newArrival.img2src;
-//   img2.classList.add('heart-icon');
-//   div.append(img2);
-    
-//   const name = document.createElement('p');
-//   name.textContent = newArrival.name;
-//   div.append(name);
-
-//   const price = document.createElement('p');
-//   price.textContent = newArrival.price;
-//   div.append(price);
-
-//   const btn = document.createElement('button');
-//   btn.classList.add('shop-now-btn');
-//   btn.textContent = newArrival.button;
-//   div.append(btn);
-
-//   newArrivalsContainer.append(div);
-//   console.log(newArrivalsContainer);
-
-// }
 
 
 // Search Products
