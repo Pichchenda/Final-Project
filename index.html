@@ -15,29 +15,45 @@
         <header class="auskids-header-container">
             <div class="auskids-header-top">
                 <div class="auskids-header-left">
-                    <img class="auskids-logo" src="./img/Auskids Logo.png" alt="Auskids Logo">
+                    <a href="#">
+                      <img class="auskids-logo" src="./img/Auskids Logo.png" alt="Auskids Logo">
+                    </a>
                 </div>
                 <div class="auskids-header-middle">
                   <form id="search-form" class="products-search">
-                    <input id="search-input" class="auskids-search-bar" type="text" placeholder="Products/Names">
+                    <input id="search-input" class="auskids-search-bar" type="search" placeholder="Products/Names">
                     <button id="submit" class="search-icon" type="submit">
-                      <svg width="24px" height="24px" viewBox="0 0 24 24" focusable="false"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Search" stroke="currentColor"><circle vector-effect="non-scaling-stroke" id="Oval-13" cx="10.5" cy="10.5" r="7"></circle><path vector-effect="non-scaling-stroke" d="M15.510498,15.2756348 L21.6812898,21.4464265" id="Path-2"></path></g></g></svg>
+                      <svg width="24px" height="24px" viewBox="0 0 24 24" focusable="false"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Search" stroke="currentColor"><circle vector-effect="non-scaling-stroke" id="Oval-13" cx="10.5" cy="10.5" r="7"></circle>
+                        <path vector-effect="non-scaling-stroke" d="M15.510498,15.2756348 L21.6812898,21.4464265" id="Path-2"></path></g></g>
+                      </svg>
                     </button>
                   </form>
-                  <div id="search-results" class="search-results"></div> 
+                  <aside class="result-container" id="result-container">
+                    <header class="result-header">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close Search Result" id="result-close">
+                    </header>
+                    <div id="search-results" class="search-results"></div>
+                  </aside>
                 </div>
                 <div class="auskids-header-right" id="icons">
                   <div id="icon-1" class="icon">
-                    <svg width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-automation="logged-out"><path d="m2 22c0-4.4872 5.47619-8.3333 10-8.3333m0 0c4.5238 0 10 3.8461 10 8.3333m-10-8.3333c3.2217 0 5.8333-2.6117 5.8333-5.83337 0-3.22166-2.6116-5.83333-5.8333-5.83333-3.22166 0-5.83333 2.61167-5.83333 5.83333 0 3.22167 2.61167 5.83337 5.83333 5.83337z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
+                    <svg width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-automation="logged-out">
+                      <path d="m2 22c0-4.4872 5.47619-8.3333 10-8.3333m0 0c4.5238 0 10 3.8461 10 8.3333m-10-8.3333c3.2217 0 5.8333-2.6117 5.8333-5.83337 0-3.22166-2.6116-5.83333-5.8333-5.83333-3.22166 0-5.83333 2.61167-5.83333 5.83333 0 3.22167 2.61167 5.83337 5.83333 5.83337z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                    </svg>
                   </div>
                   <div id="icon-2" class="icon">
-                    <svg width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
+                    <svg width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                    </svg>
                     <div id="wish-list-count">
                       <p>0</p>
                     </div>
                   </div>
                   <div id="icon-3" class="icon">
-                    <svg width="32" height="32" color="#1F1F1F" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8.42857 8.42857c0-.02005.00037-.39647.00111-.88373.00141-.92452.00418-2.24807.0084-2.29359.09649-1.04159.94959-3.25125 3.56512-3.25125 2.7899 0 3.5682 2.45874 3.5682 3.44314v2.98543m-13.5714-2.14286h20v13.57139c0 1.1835-.9594 2.1429-2.1429 2.1429h-15.71424c-1.18347 0-2.14286-.9594-2.14286-2.1429z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
+                    <svg width="32" height="32" color="#1F1F1F" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m8.42857 8.42857c0-.02005.00037-.39647.00111-.88373.00141-.92452.00418-2.24807.0084-2.29359.09649-1.04159.94959-3.25125 3.56512-3.25125 2.7899 0 3.5682 2.45874 3.5682 3.44314v2.98543m-13.5714-2.14286h20v13.57139c0 1.1835-.9594 2.1429-2.1429 2.1429h-15.71424c-1.18347 0-2.14286-.9594-2.14286-2.1429z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                    </svg>
                   </div>
                 </div> 
               </div>  
@@ -107,7 +123,7 @@
         </aside>
         <aside class="right-header-hover" id="rhh1"> 
           <header class="rhh-header">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="" id="rhh1-close">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close Button" id="rhh1-close">
           </header>
           <ul class="right-header-hover-content">
             <li>
@@ -123,7 +139,7 @@
         </aside>
         <aside class="right-header-hover" id="rhh2">
           <header class="rhh-header">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="" id="rhh2-close">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close Button" id="rhh2-close">
           </header>
           <ul class="right-header-hover-content" >
               <li>
@@ -133,7 +149,7 @@
         </aside>
         <aside class="right-header-hover" id="rhh3">
           <header class="rhh-header">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="" id="rhh3-close">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close Button" id="rhh3-close">
           </header>
           <ul class="right-header-hover-content">
               <li>
@@ -152,7 +168,7 @@
           <div class="auskids-slideshow">
             <div class="auskids-mid-year-sales-container">
               <div class="mid-year-sales">
-                <img id="page-screen" src='./img/Mid Year Sales.jpeg' alt="">
+                <img id="page-screen" src='./img/Mid Year Sales.jpeg' alt="Mid Year Sales Image">
                 <div class="text">
                   <h1>Save up to 50% for babies and toddlers' clothes, toys and more....</h1>
                   <button class="shop-now-btn">Shop Now</button>
@@ -176,143 +192,230 @@
               <div class="auskids-new-arrivals-indi-container">
                     <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 1.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
                     </div>
-                        <p>Squirrel Crew Neck Jumper</p>
-                        <p>$39.99</p>
+                    <p>Squirrel Crew Neck Jumper</p>
+                    <p>$39.99</p>
+                    <div>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>   
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 2.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
-                    </div>
-                    <div class="item-detail">
-                        <p>Pink Casual Summner Dress</p>
-                        <p>$29.99</p>
-                    </div>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
+                  </div>
+                  <p>Pink Casual Summner Dress</p>
+                  <p>$29.99</p>
+                  <div>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 3.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
-                    </div>
-                    <div class="item-detail">
-                        <p>Girls High Top Casual Shoes</p>
-                        <p>$49.99</p>
-                    </div>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
+                  </div>
+                  <p>Girls High Top Casual Shoes</p>
+                  <p>$49.99</p>
+                  <div>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 4.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>  
-                    </div>
-                    <div class="item-detail">
-                        <p>Denim Jacket</p>
-                        <p>$39.99</p>
-                    </div>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>  
+                  </div>
+                  <p>Denim Jacket</p>
+                  <p>$39.99</p>
+                  <div>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 5.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
-                    </div>
-                    <div class="item-detail">
-                        <p>Super Mario Licence T-Shirt</p>
-                        <p>$14.99</p>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
+                  </div>
+                    <p>Super Mario Licence T-Shirt</p>
+                    <p>$14.99</p>
+                    <div>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
                     </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 6.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
-                    </div>
-                    <div class="item-detail">
-                        <p>Rabbits Knit Jumper</p>
-                        <p>$39.99</p>
-                    </div>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
+                  </div>
+                  <p>Rabbits Knit Jumper</p>
+                  <p>$39.99</p>
+                  <div>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
-                      <img class="new-arrivals-image" src="./img/New Arrivals 7.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
-                    </div>
-                    <div class="item-detail">
-                        <p>Baby Overalls Set</p>
-                        <p>$34.99</p>
-                    </div>
+                    <img class="new-arrivals-image" src="./img/New Arrivals 7.jpeg" alt="New Arrivals">
+                    <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                    </svg>
+                  </div>
+                  <p>Baby Overalls Set</p>
+                  <p>$34.99</p>
+                  <div>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                   <div class="new-arrivals-img-container">
                       <img class="new-arrivals-image" src="./img/New Arrivals 8.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
-                    </div>
-                    <div class="item-detail">
-                        <p>Girl's Denim Dungaree Set</p>
-                        <p>$44.99</p>
-                    </div>
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
+                  </div>
+                  <p>Girl's Denim Dungaree Set</p>
+                  <p>$44.99</p>
+                  <div>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                   <button class="shop-now-btn">Shop Now</button>
               </div>
               <div class="auskids-new-arrivals-indi-container">
                     <div class="new-arrivals-img-container">
-                        <img class="new-arrivals-image" src="./img/New Arrivals 9.jpeg" alt="New Arrivals">
-                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path></svg>
+                      <img class="new-arrivals-image" src="./img/New Arrivals 9.jpeg" alt="New Arrivals">
+                      <svg class="heart-icon" width="32" height="32" stroke-width="1.5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 20.5714 8.5786-8.721c1.8952-1.92665 1.8952-5.05029 0-6.97689-1.8951-1.9266-4.9677-1.9266-6.8629 0l-1.7157 1.74421-1.7157-1.74421c-1.89517-1.9266-4.9678-1.9266-6.86294 0-1.89515 1.9266-1.89515 5.05024 0 6.97689z" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1F1F" stroke-width="1.5px"></path>
+                      </svg>
                     </div>
-                    <div class="item-detail">
-                        <p>Bunny Knit Jumper</p>
-                        <p>$24.99</p>
+                    <p>Bunny Knit Jumper</p>
+                    <p>$24.99</p>
+                    <div>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
                     </div>
                     <button class="shop-now-btn">Shop Now</button>
               </div>
             </div>
       </section>
-      <section class="auskids-trending" >
+      <section class="auskids-trending">
           <h2 class="auskids-trending-title">Trending Searches</h2>
-          <ul class="auskids-trending-search-items" id="trending">
+          <ul class="auskids-trending-search-items">
               <li class="search-item"><a href="#">Kids' Clothes</a></li>
               <li class="search-item"><a href="#">Outdoor Toys &amp Activities</a></li>
               <li class="search-item"><a href="#">Winter Clothes</a></li>
               <li class="search-item"><a href="#">Kids' Bags</a></li>
               <li class="search-item"><a href="#">Knit Jumper</a></li>
               <li class="search-item"><a href="#">Babies' Clothes</a></li>
-              <li class="search-item"><a href="#">Girl's Hairband</a></li>
+              <li class="search-item"><a hef="#">Girl's Hairband</a></li>
               <li class="search-item"><a href="#">Baby Coverall</a></li>
               <li class="search-item"><a href="#">Kids' Sweater</a></li>
           </ul>
       </section>
-        <footer class="auskids-footer">
-            <nav class="auskids-footer-container">
-            <ul class="footer-indi">
-                <li class="list-item"><a href="#">About Us</a></li>
-                <li class="list-item"><a href="#">Sales &amp Promotions</a></li>
-                <li class="list-item"><a href="#">Store Locations</a></li>
-                <li class="list-item"><a href="#">Careers</a></li>
-                <li class="list-item"><a href="#">FAQs</a></li>
-            </ul>
-            <ul class="footer-indi">
-                <li class="list-item"><a href="#">Shopping</a></li>
-                <li class="list-item"><a href="#">Track Order</a></li>
-                <li class="list-item"><a href="#">Returns &amp Exchanges</a></li>
-                <li class="list-item"><a href="#">Delivery and Click &amp Collect </a></li>
-                <li class="list-item"><a href="#">Payment Options</a></li>
-            </ul>
+      <aside >
+        <button id="open-btn" class="open-button">
+          <img src="./img/live-chat.svg" alt="Live Chat Image">
+        </button>
+        <div class="chat-popup" id="chatForm">
+          <form class="form-container">
+            <label for="msg">
+              <b>Message</b>
+            </label>
+            <textarea placeholder="Type message here..." name="msg" required></textarea>
+            <div class="btn-container">
+              <button type="submit" class="btn">Send</button>
+              <button id="close-btn" type="button" class="btn cancel">Close</button>
+            </div>
+          </form>
+        </div>
+      </aside>
+      <aside>
+        <button class="to-top">
+          <img src="./img/Arrow_up.png" alt="Up Arrow">
+        </button>
+      </aside>
+      <footer class="auskids-footer">
+        <nav class="auskids-footer-container">
+          <ul class="footer-indi">
+            <li class="list-item"><a href="#">About Us</a></li>
+            <li class="list-item"><a href="#">Sales &amp Promotions</a></li>
+            <li class="list-item"><a href="#">Store Locations</a></li>
+            <li class="list-item"><a href="#">Careers</a></li>
+            <li class="list-item"><a href="#">FAQs</a></li>
+          </ul>
+          <ul class="footer-indi">
+            <li class="list-item"><a href="#">Shopping</a></li>
+            <li class="list-item"><a href="#">Track Order</a></li>
+            <li class="list-item"><a href="#">Returns &amp Exchanges</a></li>
+            <li class="list-item"><a href="#">Delivery and Click &amp Collect </a></li>
+            <li class="list-item"><a href="#">Payment Options</a></li>
+          </ul>
             <div class="auskids-info">
-                <p class="follow-us">Follow us on</p>
-                <div class="auskids-social">
-                    <a href="https://www.facebook.com/myer/" class="fa fa-facebook"></a>
-                    <a href="https://twitter.com/myer" class="fa fa-twitter"></a>
-                    <a href="https://www.instagram.com/myer/" class="fa fa-instagram"></a>
-                </div>
-                </div>
-            </nav>
-            <p class="copyright">&copy Copyright 2023 Auskids Pty Ltd.</p>     
-        </footer>    
+              <p class="follow-us">Follow us on</p>
+              <div class="auskids-social">
+                <a href="https://www.facebook.com/myer/" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/myer" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/myer/" class="fa fa-instagram"></a>
+              </div>
+            </div>
+          </nav>
+          <p class="copyright">&copy Copyright 2023 Auskids Pty Ltd.</p>     
+      </footer>    
     </main>
      
 </body>

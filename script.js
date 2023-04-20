@@ -1,3 +1,23 @@
+// Result display
+
+const resultContainer = document.getElementById('result-container');
+const  submit= document.getElementById('submit');
+const resultClose = document.getElementById('result-close');
+
+function resultAppears (){
+  resultContainer.classList.add('show-result');  
+}
+
+submit.addEventListener('click',resultAppears);
+
+function resultDisappears (){
+  resultContainer.classList.remove('show-result');
+}
+
+resultClose.addEventListener('click', resultDisappears);
+
+
+
 // Wishlist 
 
 const wishListCount = document.querySelector('#wish-list-count');
@@ -32,6 +52,25 @@ function decrement(){
   list -= 1
   let counter = wishListCount;
   counter.textContent = list;
+}
+
+
+// Star Rating
+
+const faStars = document.querySelectorAll('.fa-star');
+
+for (let i = 0; i < faStars.length; i++){
+  const faStar = faStars [i];
+
+  function colorChange (){
+    if (faStar.style.color === "black" ||!faStar.style.color ){
+      faStar.style.color = "orange";
+    } else {
+      faStar.style.color = "black";
+    }
+    
+  }
+  faStar.addEventListener('click', colorChange);
 }
 
 
@@ -79,6 +118,8 @@ icon3.addEventListener('click', displayText3);
 rhh1Close.addEventListener('click', hideText);
 rhh2Close.addEventListener('click', hideText);
 rhh3Close.addEventListener('click', hideText);
+
+
 
 //Side Menu
 
@@ -237,10 +278,10 @@ function searchProducts(event){
     return;
   }
   
-  searchResults.innerHTML = "";
+  searchResults.innerHTML= " ";
   const results = items.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
 
-  if(results){
+  if(results.length > 0){
     for(let i = 0; i < results.length; i++){
       const item = results[i];
       const resultElement = createResultElement(item);
@@ -250,6 +291,47 @@ function searchProducts(event){
     searchResults.innerHTML = '<p>Not Found</p>';
   } 
   return;
+  searchInput.value = "";
 }
 
 searchForm.addEventListener('submit', searchProducts); 
+
+
+
+
+// Pop up chat message
+const openBtn = document.querySelector('#open-btn');
+const closeBtn = document.querySelector('#close-btn');
+const chatForm = document.querySelector('#chatForm');
+
+function openForm() {
+  chatForm.style.display = "block";
+}
+
+function closeForm() {
+  chatForm.style.display = "none";
+}
+
+openBtn.addEventListener('click', openForm);
+closeBtn.addEventListener('click', closeForm);
+
+
+// Scroll To Top 
+
+const toTop = document.querySelector('.to-top');
+
+window.onscroll = function scrollScreen(){
+  if(document.documentElement.scrollTop > 20){
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+}
+
+function topFunction(){
+  document.documentElement.scrollTop = 0;
+}
+
+toTop.addEventListener('click', topFunction);
+
+
